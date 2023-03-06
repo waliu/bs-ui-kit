@@ -19,9 +19,9 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     angularOutputTarget({
-      componentCorePackage: 'stencil-library',
-      directivesProxyFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/components.ts',
-      directivesArrayFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/index.ts',
+      componentCorePackage: 'bs-web-component',
+      directivesProxyFile: '../packages/bs-web-component-ng/projects/bs-web-component-ng/src/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../packages/bs-web-component-ng/projects/bs-web-component-ng/src/lib/stencil-generated/index.ts',
     }),
   ],
 };
