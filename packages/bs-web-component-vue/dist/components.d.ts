@@ -1,0 +1,2 @@
+import type { JSX } from 'bs-web-component';
+export declare const MyComponent: import("vue").DefineComponent<JSX.MyComponent & import("./vue-component-lib/utils").InputProps<string | number | boolean>, object, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<JSX.MyComponent & import("./vue-component-lib/utils").InputProps<string | number | boolean>>, {}>;

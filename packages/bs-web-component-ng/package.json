@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "start-app": "ng serve bs-web-app-angular",
+    "build-app": "ng build bs-web-app-angular",
+    "build-libs": "ng build bs-web-component-ng",
+    "watch-libs": "ng build bs-web-component-ng --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
