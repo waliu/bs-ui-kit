@@ -27,7 +27,8 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0"
+    "@stencil/core": "^3.0.0",
+    "echarts": "^5.4.1"
   },
   "devDependencies": {
     "@stencil/angular-output-target": "^0.5.0",
