@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core';
 import {angularOutputTarget} from "@stencil/angular-output-target";
 import {vueOutputTarget} from "@stencil/vue-output-target";
+import {sass} from "@stencil/sass";
 
 export const config: Config = {
   namespace: 'bs-web-component',
@@ -29,4 +30,7 @@ export const config: Config = {
       proxiesFile: '../bs-web-component-vue/lib/components.ts',
     }),
   ],
+  plugins: [
+    sass()
+  ]
 };
