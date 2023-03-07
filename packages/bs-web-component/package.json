@@ -21,19 +21,15 @@
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
-    "start-r": "stencil build --watch --serve --max-workers",
+    "start-r": "stencil build --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0",
-    "bootstrap": "^5.2.3",
-    "echarts": "^5.4.1"
+    "@stencil/core": "^3.0.0"
   },
   "devDependencies": {
-    "@stencil/angular-output-target": "^0.5.0",
-    "@stencil/vue-output-target": "^0.7.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "jest": "^27.5.1",

@@ -1,6 +1,5 @@
-import {Component, Prop, h, Element} from '@stencil/core';
-import {format} from '../../utils/utils';
-// import * as echarts from 'echarts';
+import { Component, Prop, h } from '@stencil/core';
+import { format } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
@@ -9,12 +8,12 @@ import {format} from '../../utils/utils';
 })
 export class MyComponent {
   /**
-   * 第一个名称
+   * The first name
    */
   @Prop() first: string;
 
   /**
-   * 最后一个名称
+   * The middle name
    */
   @Prop() middle: string;
 
@@ -23,14 +22,11 @@ export class MyComponent {
    */
   @Prop() last: string;
 
-
-  @Element() el: HTMLElement;
-
   private getText(): string {
     return format(this.first, this.middle, this.last);
   }
 
   render() {
-    return <div id="main">Hello, World! I'm {this.getText()}</div>;
+    return <div>Hello, World! I'm {this.getText()}</div>;
   }
 }
