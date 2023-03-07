@@ -32,5 +32,6 @@ export const config: Config = {
   ],
   plugins: [
     sass()
-  ]
+  ],
+  globalStyle: "src/global/main.scss"
 };
