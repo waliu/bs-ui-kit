@@ -7,6 +7,26 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BsAlert {
+        /**
+          * 样式文件
+         */
+        "class": string;
+        /**
+          * 是否显示关闭按钮
+         */
+        "dismissible": boolean;
+        /**
+          * 消息内容
+         */
+        "message": string;
+        /**
+          * 显示一个图标
+         */
+        "showIcon": string;
+        /**
+          * 弹窗类型
+         */
+        "type": string;
     }
     interface MyComponent {
         /**
@@ -22,6 +42,10 @@ export namespace Components {
          */
         "middle": string;
     }
+}
+export interface BsAlertCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBsAlertElement;
 }
 declare global {
     interface HTMLBsAlertElement extends Components.BsAlert, HTMLStencilElement {
@@ -43,6 +67,30 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BsAlert {
+        /**
+          * 样式文件
+         */
+        "class"?: string;
+        /**
+          * 是否显示关闭按钮
+         */
+        "dismissible"?: boolean;
+        /**
+          * 消息内容
+         */
+        "message"?: string;
+        /**
+          * 关闭事件
+         */
+        "onBsOnClose"?: (event: BsAlertCustomEvent<void>) => void;
+        /**
+          * 显示一个图标
+         */
+        "showIcon"?: string;
+        /**
+          * 弹窗类型
+         */
+        "type"?: string;
     }
     interface MyComponent {
         /**

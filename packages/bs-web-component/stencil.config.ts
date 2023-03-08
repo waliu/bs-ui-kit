@@ -1,4 +1,4 @@
-import { Config } from '@stencil/core';
+import {Config} from '@stencil/core';
 import {angularOutputTarget} from "@stencil/angular-output-target";
 import {vueOutputTarget} from "@stencil/vue-output-target";
 import {sass} from "@stencil/sass";
@@ -33,5 +33,5 @@ export const config: Config = {
   plugins: [
     sass()
   ],
-  globalStyle: "src/global/main.scss"
+
 };

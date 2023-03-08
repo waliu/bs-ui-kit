@@ -1,0 +1,13 @@
+@import "./../../global/scss/bootstrap";
+
+:host {
+  .btn-close:focus {
+    outline: 0;
+    box-shadow: none;
+    opacity: 1;
+  }
+  .hidden{
+    display: none;
+  }
+}
+

@@ -8,24 +8,31 @@ import { Components } from 'bs-web-component';
 
 
 @ProxyCmp({
+  inputs: ['class', 'dismissible', 'message', 'showIcon', 'type']
 })
 @Component({
   selector: 'bs-alert',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['class', 'dismissible', 'message', 'showIcon', 'type'],
 })
 export class BsAlert {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['bsOnClose']);
   }
 }
 
 
-export declare interface BsAlert extends Components.BsAlert {}
+export declare interface BsAlert extends Components.BsAlert {
+  /**
+   * 关闭事件
+   */
+  bsOnClose: EventEmitter<CustomEvent<void>>;
+}
 
 
 @ProxyCmp({
