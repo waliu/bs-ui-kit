@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./test-button.component.scss']
 })
 export class TestButtonComponent {
-
+  show(){
+    console.log("show button")
+  }
 }

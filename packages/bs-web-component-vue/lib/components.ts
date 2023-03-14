@@ -27,6 +27,9 @@ export const BsButton = /*@__PURE__*/ defineContainer<JSX.BsButton>('bs-button',
 ]);
 
 
+export const BsPlaceholders = /*@__PURE__*/ defineContainer<JSX.BsPlaceholders>('bs-placeholders', undefined);
+
+
 export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component', undefined, [
   'first',
   'middle',

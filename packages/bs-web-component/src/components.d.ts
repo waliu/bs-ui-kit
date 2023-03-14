@@ -56,6 +56,8 @@ export namespace Components {
          */
         "type": BSThemeType1;
     }
+    interface BsPlaceholders {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -88,6 +90,12 @@ declare global {
         prototype: HTMLBsButtonElement;
         new (): HTMLBsButtonElement;
     };
+    interface HTMLBsPlaceholdersElement extends Components.BsPlaceholders, HTMLStencilElement {
+    }
+    var HTMLBsPlaceholdersElement: {
+        prototype: HTMLBsPlaceholdersElement;
+        new (): HTMLBsPlaceholdersElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -97,6 +105,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "bs-alert": HTMLBsAlertElement;
         "bs-button": HTMLBsButtonElement;
+        "bs-placeholders": HTMLBsPlaceholdersElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -149,6 +158,8 @@ declare namespace LocalJSX {
          */
         "type"?: BSThemeType1;
     }
+    interface BsPlaceholders {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -166,6 +177,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "bs-alert": BsAlert;
         "bs-button": BsButton;
+        "bs-placeholders": BsPlaceholders;
         "my-component": MyComponent;
     }
 }
@@ -175,6 +187,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "bs-alert": LocalJSX.BsAlert & JSXBase.HTMLAttributes<HTMLBsAlertElement>;
             "bs-button": LocalJSX.BsButton & JSXBase.HTMLAttributes<HTMLBsButtonElement>;
+            "bs-placeholders": LocalJSX.BsPlaceholders & JSXBase.HTMLAttributes<HTMLBsPlaceholdersElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

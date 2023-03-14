@@ -33,11 +33,14 @@ export class BsButton {
       <Host class={this.class}>
         <button
           type="button"
-          class={`btn
-          ${this.type ? " btn-" + this.type : ""}
-          ${this.outline ? " btn-outline-" + this.type : ""}
-          ${this.size ? " btn-" + this.size : ""}
-          `}
+          class={
+            `btn
+            ${this.outline && this.type != null ? " btn-outline-" + this.type : ""}
+            ${!(this.outline && this.type != null) ? " btn-" + this.type : ""}
+            ${this.type ? " btn-" + this.size : ""}
+          `
+          }
+          disabled={this.disabled}
         >
           <slot></slot>
         </button>
