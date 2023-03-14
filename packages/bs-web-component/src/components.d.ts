@@ -28,6 +28,8 @@ export namespace Components {
          */
         "type": string;
     }
+    interface BsButton {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -54,6 +56,12 @@ declare global {
         prototype: HTMLBsAlertElement;
         new (): HTMLBsAlertElement;
     };
+    interface HTMLBsButtonElement extends Components.BsButton, HTMLStencilElement {
+    }
+    var HTMLBsButtonElement: {
+        prototype: HTMLBsButtonElement;
+        new (): HTMLBsButtonElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -62,6 +70,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "bs-alert": HTMLBsAlertElement;
+        "bs-button": HTMLBsButtonElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -92,6 +101,8 @@ declare namespace LocalJSX {
          */
         "type"?: string;
     }
+    interface BsButton {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -108,6 +119,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "bs-alert": BsAlert;
+        "bs-button": BsButton;
         "my-component": MyComponent;
     }
 }
@@ -116,6 +128,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "bs-alert": LocalJSX.BsAlert & JSXBase.HTMLAttributes<HTMLBsAlertElement>;
+            "bs-button": LocalJSX.BsButton & JSXBase.HTMLAttributes<HTMLBsButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
