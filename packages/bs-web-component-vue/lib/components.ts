@@ -18,7 +18,13 @@ export const BsAlert = /*@__PURE__*/ defineContainer<JSX.BsAlert>('bs-alert', un
 ]);
 
 
-export const BsButton = /*@__PURE__*/ defineContainer<JSX.BsButton>('bs-button', undefined);
+export const BsButton = /*@__PURE__*/ defineContainer<JSX.BsButton>('bs-button', undefined, [
+  'type',
+  'outline',
+  'size',
+  'disabled',
+  'class'
+]);
 
 
 export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component', undefined, [

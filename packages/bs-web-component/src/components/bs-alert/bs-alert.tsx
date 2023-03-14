@@ -9,7 +9,7 @@ export class BsAlert {
   /**
    * 弹窗类型
    */
-  @Prop() type: string = null;
+  @Prop() type: BSThemeType = null;
   /**
    * 是否显示关闭按钮
    */
@@ -61,5 +61,5 @@ export class BsAlert {
   }
 }
 
-export type BsAlertType = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+export type BSThemeType = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
 

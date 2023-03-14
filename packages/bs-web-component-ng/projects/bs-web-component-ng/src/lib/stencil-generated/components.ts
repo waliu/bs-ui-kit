@@ -36,13 +36,14 @@ export declare interface BsAlert extends Components.BsAlert {
 
 
 @ProxyCmp({
+  inputs: ['class', 'disabled', 'outline', 'size', 'type']
 })
 @Component({
   selector: 'bs-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['class', 'disabled', 'outline', 'size', 'type'],
 })
 export class BsButton {
   protected el: HTMLElement;

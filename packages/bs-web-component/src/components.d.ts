@@ -5,6 +5,12 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { BSThemeType } from "./components/bs-alert/bs-alert";
+import { BSThemeType as BSThemeType1 } from "./components/bs-alert/bs-alert";
+import { BSSizeType } from "./components/bs-button/bs-button";
+export { BSThemeType } from "./components/bs-alert/bs-alert";
+export { BSThemeType as BSThemeType1 } from "./components/bs-alert/bs-alert";
+export { BSSizeType } from "./components/bs-button/bs-button";
 export namespace Components {
     interface BsAlert {
         /**
@@ -26,9 +32,29 @@ export namespace Components {
         /**
           * 弹窗类型
          */
-        "type": string;
+        "type": BSThemeType;
     }
     interface BsButton {
+        /**
+          * 组件 class 样式
+         */
+        "class": string;
+        /**
+          * 是否为禁用状态
+         */
+        "disabled": boolean;
+        /**
+          * 样式
+         */
+        "outline": boolean;
+        /**
+          * 大小
+         */
+        "size": BSSizeType;
+        /**
+          * 主题色
+         */
+        "type": BSThemeType1;
     }
     interface MyComponent {
         /**
@@ -99,9 +125,29 @@ declare namespace LocalJSX {
         /**
           * 弹窗类型
          */
-        "type"?: string;
+        "type"?: BSThemeType;
     }
     interface BsButton {
+        /**
+          * 组件 class 样式
+         */
+        "class"?: string;
+        /**
+          * 是否为禁用状态
+         */
+        "disabled"?: boolean;
+        /**
+          * 样式
+         */
+        "outline"?: boolean;
+        /**
+          * 大小
+         */
+        "size"?: BSSizeType;
+        /**
+          * 主题色
+         */
+        "type"?: BSThemeType1;
     }
     interface MyComponent {
         /**
