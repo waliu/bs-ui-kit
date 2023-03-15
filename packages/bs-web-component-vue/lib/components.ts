@@ -18,6 +18,9 @@ export const BsAlert = /*@__PURE__*/ defineContainer<JSX.BsAlert>('bs-alert', un
 ]);
 
 
+export const BsBadge = /*@__PURE__*/ defineContainer<JSX.BsBadge>('bs-badge', undefined);
+
+
 export const BsButton = /*@__PURE__*/ defineContainer<JSX.BsButton>('bs-button', undefined, [
   'type',
   'outline',

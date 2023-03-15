@@ -36,6 +36,27 @@ export declare interface BsAlert extends Components.BsAlert {
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'bs-badge',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsBadge {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsBadge extends Components.BsBadge {}
+
+
+@ProxyCmp({
   inputs: ['class', 'disabled', 'outline', 'size', 'type']
 })
 @Component({

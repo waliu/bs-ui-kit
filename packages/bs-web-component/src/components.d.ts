@@ -34,6 +34,8 @@ export namespace Components {
          */
         "type": BSThemeType;
     }
+    interface BsBadge {
+    }
     interface BsButton {
         /**
           * 组件 class 样式
@@ -84,6 +86,12 @@ declare global {
         prototype: HTMLBsAlertElement;
         new (): HTMLBsAlertElement;
     };
+    interface HTMLBsBadgeElement extends Components.BsBadge, HTMLStencilElement {
+    }
+    var HTMLBsBadgeElement: {
+        prototype: HTMLBsBadgeElement;
+        new (): HTMLBsBadgeElement;
+    };
     interface HTMLBsButtonElement extends Components.BsButton, HTMLStencilElement {
     }
     var HTMLBsButtonElement: {
@@ -104,6 +112,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "bs-alert": HTMLBsAlertElement;
+        "bs-badge": HTMLBsBadgeElement;
         "bs-button": HTMLBsButtonElement;
         "bs-placeholders": HTMLBsPlaceholdersElement;
         "my-component": HTMLMyComponentElement;
@@ -135,6 +144,8 @@ declare namespace LocalJSX {
           * 弹窗类型
          */
         "type"?: BSThemeType;
+    }
+    interface BsBadge {
     }
     interface BsButton {
         /**
@@ -176,6 +187,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "bs-alert": BsAlert;
+        "bs-badge": BsBadge;
         "bs-button": BsButton;
         "bs-placeholders": BsPlaceholders;
         "my-component": MyComponent;
@@ -186,6 +198,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "bs-alert": LocalJSX.BsAlert & JSXBase.HTMLAttributes<HTMLBsAlertElement>;
+            "bs-badge": LocalJSX.BsBadge & JSXBase.HTMLAttributes<HTMLBsBadgeElement>;
             "bs-button": LocalJSX.BsButton & JSXBase.HTMLAttributes<HTMLBsButtonElement>;
             "bs-placeholders": LocalJSX.BsPlaceholders & JSXBase.HTMLAttributes<HTMLBsPlaceholdersElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
