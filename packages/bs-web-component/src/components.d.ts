@@ -8,9 +8,13 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { BSThemeType } from "./components/bs-alert/bs-alert";
 import { BSThemeType as BSThemeType1 } from "./components/bs-alert/bs-alert";
 import { BSSizeType } from "./components/bs-button/bs-button";
+import { BSThemeType as BSThemeType2, Direction } from "./components/bs-cards/bs-cards";
+import { BSThemeType as BSThemeType3 } from "./components/bs-cards/bs-cards";
 export { BSThemeType } from "./components/bs-alert/bs-alert";
 export { BSThemeType as BSThemeType1 } from "./components/bs-alert/bs-alert";
 export { BSSizeType } from "./components/bs-button/bs-button";
+export { BSThemeType as BSThemeType2, Direction } from "./components/bs-cards/bs-cards";
+export { BSThemeType as BSThemeType3 } from "./components/bs-cards/bs-cards";
 export namespace Components {
     interface BaNavbar {
     }
@@ -69,6 +73,60 @@ export namespace Components {
         "type": BSThemeType1;
     }
     interface BsCards {
+        /**
+          * 边框颜色
+         */
+        "borderType": BSThemeType2;
+        /**
+          * 页脚
+         */
+        "cardFooter": string;
+        /**
+          * 页眉
+         */
+        "cardHeader": string;
+        /**
+          * 组件 class 样式
+         */
+        "class": string;
+        /**
+          * 文字方向：center居中；end：居右；
+         */
+        "direction": Direction;
+        /**
+          * 字体颜色
+         */
+        "textType": BSThemeType2;
+        /**
+          * 图片url
+         */
+        "thumb": string;
+        /**
+          * 主题色
+         */
+        "type": BSThemeType2;
+    }
+    interface BsCardsBody {
+        /**
+          * 组件 class 样式
+         */
+        "class": string;
+        /**
+          * 描述
+         */
+        "desc": string;
+        /**
+          * 副标题
+         */
+        "subtitles": string;
+        /**
+          * 字体颜色
+         */
+        "textType": BSThemeType3;
+        /**
+          * 标题
+         */
+        "title": string;
     }
     interface BsCarousel {
     }
@@ -164,6 +222,12 @@ declare global {
         prototype: HTMLBsCardsElement;
         new (): HTMLBsCardsElement;
     };
+    interface HTMLBsCardsBodyElement extends Components.BsCardsBody, HTMLStencilElement {
+    }
+    var HTMLBsCardsBodyElement: {
+        prototype: HTMLBsCardsBodyElement;
+        new (): HTMLBsCardsBodyElement;
+    };
     interface HTMLBsCarouselElement extends Components.BsCarousel, HTMLStencilElement {
     }
     var HTMLBsCarouselElement: {
@@ -250,6 +314,7 @@ declare global {
         "bs-breadcrumb": HTMLBsBreadcrumbElement;
         "bs-button": HTMLBsButtonElement;
         "bs-cards": HTMLBsCardsElement;
+        "bs-cards-body": HTMLBsCardsBodyElement;
         "bs-carousel": HTMLBsCarouselElement;
         "bs-collapse": HTMLBsCollapseElement;
         "bs-form-controls": HTMLBsFormControlsElement;
@@ -327,6 +392,60 @@ declare namespace LocalJSX {
         "type"?: BSThemeType1;
     }
     interface BsCards {
+        /**
+          * 边框颜色
+         */
+        "borderType"?: BSThemeType2;
+        /**
+          * 页脚
+         */
+        "cardFooter"?: string;
+        /**
+          * 页眉
+         */
+        "cardHeader"?: string;
+        /**
+          * 组件 class 样式
+         */
+        "class"?: string;
+        /**
+          * 文字方向：center居中；end：居右；
+         */
+        "direction"?: Direction;
+        /**
+          * 字体颜色
+         */
+        "textType"?: BSThemeType2;
+        /**
+          * 图片url
+         */
+        "thumb"?: string;
+        /**
+          * 主题色
+         */
+        "type"?: BSThemeType2;
+    }
+    interface BsCardsBody {
+        /**
+          * 组件 class 样式
+         */
+        "class"?: string;
+        /**
+          * 描述
+         */
+        "desc"?: string;
+        /**
+          * 副标题
+         */
+        "subtitles"?: string;
+        /**
+          * 字体颜色
+         */
+        "textType"?: BSThemeType3;
+        /**
+          * 标题
+         */
+        "title"?: string;
     }
     interface BsCarousel {
     }
@@ -382,6 +501,7 @@ declare namespace LocalJSX {
         "bs-breadcrumb": BsBreadcrumb;
         "bs-button": BsButton;
         "bs-cards": BsCards;
+        "bs-cards-body": BsCardsBody;
         "bs-carousel": BsCarousel;
         "bs-collapse": BsCollapse;
         "bs-form-controls": BsFormControls;
@@ -408,6 +528,7 @@ declare module "@stencil/core" {
             "bs-breadcrumb": LocalJSX.BsBreadcrumb & JSXBase.HTMLAttributes<HTMLBsBreadcrumbElement>;
             "bs-button": LocalJSX.BsButton & JSXBase.HTMLAttributes<HTMLBsButtonElement>;
             "bs-cards": LocalJSX.BsCards & JSXBase.HTMLAttributes<HTMLBsCardsElement>;
+            "bs-cards-body": LocalJSX.BsCardsBody & JSXBase.HTMLAttributes<HTMLBsCardsBodyElement>;
             "bs-carousel": LocalJSX.BsCarousel & JSXBase.HTMLAttributes<HTMLBsCarouselElement>;
             "bs-collapse": LocalJSX.BsCollapse & JSXBase.HTMLAttributes<HTMLBsCollapseElement>;
             "bs-form-controls": LocalJSX.BsFormControls & JSXBase.HTMLAttributes<HTMLBsFormControlsElement>;

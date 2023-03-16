@@ -9,6 +9,7 @@ export const DIRECTIVES = [
   d.BsBreadcrumb,
   d.BsButton,
   d.BsCards,
+  d.BsCardsBody,
   d.BsCarousel,
   d.BsCollapse,
   d.BsFormControls,
