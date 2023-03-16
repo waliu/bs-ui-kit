@@ -143,13 +143,14 @@ export declare interface BsButton extends Components.BsButton {}
 
 
 @ProxyCmp({
+  inputs: ['borderType', 'cardFooter', 'cardHeader', 'class', 'direction', 'textType', 'thumb', 'type']
 })
 @Component({
   selector: 'bs-cards',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['borderType', 'cardFooter', 'cardHeader', 'class', 'direction', 'textType', 'thumb', 'type'],
 })
 export class BsCards {
   protected el: HTMLElement;
@@ -161,6 +162,28 @@ export class BsCards {
 
 
 export declare interface BsCards extends Components.BsCards {}
+
+
+@ProxyCmp({
+  inputs: ['class', 'desc', 'subtitles', 'textType', 'title']
+})
+@Component({
+  selector: 'bs-cards-body',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['class', 'desc', 'subtitles', 'textType', 'title'],
+})
+export class BsCardsBody {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsCardsBody extends Components.BsCardsBody {}
 
 
 @ProxyCmp({

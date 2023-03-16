@@ -41,7 +41,25 @@ export const BsButton = /*@__PURE__*/ defineContainer<JSX.BsButton>('bs-button',
 ]);
 
 
-export const BsCards = /*@__PURE__*/ defineContainer<JSX.BsCards>('bs-cards', undefined);
+export const BsCards = /*@__PURE__*/ defineContainer<JSX.BsCards>('bs-cards', undefined, [
+  'type',
+  'borderType',
+  'textType',
+  'thumb',
+  'cardHeader',
+  'cardFooter',
+  'direction',
+  'class'
+]);
+
+
+export const BsCardsBody = /*@__PURE__*/ defineContainer<JSX.BsCardsBody>('bs-cards-body', undefined, [
+  'title',
+  'subtitles',
+  'desc',
+  'textType',
+  'class'
+]);
 
 
 export const BsCarousel = /*@__PURE__*/ defineContainer<JSX.BsCarousel>('bs-carousel', undefined);
