@@ -8,6 +8,48 @@ import { Components } from 'bs-web-component';
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'ba-navbar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BaNavbar {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BaNavbar extends Components.BaNavbar {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-accordion',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsAccordion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsAccordion extends Components.BsAccordion {}
+
+
+@ProxyCmp({
   inputs: ['class', 'dismissible', 'message', 'showIcon', 'type']
 })
 @Component({
@@ -58,6 +100,27 @@ export declare interface BsBadge extends Components.BsBadge {}
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'bs-breadcrumb',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsBreadcrumb {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsBreadcrumb extends Components.BsBreadcrumb {}
+
+
+@ProxyCmp({
   inputs: ['class', 'disabled', 'outline', 'size', 'type']
 })
 @Component({
@@ -103,6 +166,90 @@ export declare interface BsCards extends Components.BsCards {}
 @ProxyCmp({
 })
 @Component({
+  selector: 'bs-carousel',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsCarousel {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsCarousel extends Components.BsCarousel {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-collapse',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsCollapse {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsCollapse extends Components.BsCollapse {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-list-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsListGroup {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsListGroup extends Components.BsListGroup {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-pagination',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsPagination {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsPagination extends Components.BsPagination {}
+
+
+@ProxyCmp({
+})
+@Component({
   selector: 'bs-placeholders',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
@@ -119,6 +266,111 @@ export class BsPlaceholders {
 
 
 export declare interface BsPlaceholders extends Components.BsPlaceholders {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-popovers',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsPopovers {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsPopovers extends Components.BsPopovers {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-scrollspy',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsScrollspy {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsScrollspy extends Components.BsScrollspy {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-spinners',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsSpinners {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsSpinners extends Components.BsSpinners {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-toasts',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsToasts {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsToasts extends Components.BsToasts {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-tooltips',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsTooltips {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsTooltips extends Components.BsTooltips {}
 
 
 @ProxyCmp({

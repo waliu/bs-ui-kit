@@ -12,6 +12,10 @@ export { BSThemeType } from "./components/bs-alert/bs-alert";
 export { BSThemeType as BSThemeType1 } from "./components/bs-alert/bs-alert";
 export { BSSizeType } from "./components/bs-button/bs-button";
 export namespace Components {
+    interface BaNavbar {
+    }
+    interface BsAccordion {
+    }
     interface BsAlert {
         /**
           * 样式文件
@@ -40,6 +44,8 @@ export namespace Components {
          */
         "type": BSThemeType1;
     }
+    interface BsBreadcrumb {
+    }
     interface BsButton {
         /**
           * 组件 class 样式
@@ -64,7 +70,25 @@ export namespace Components {
     }
     interface BsCards {
     }
+    interface BsCarousel {
+    }
+    interface BsCollapse {
+    }
+    interface BsListGroup {
+    }
+    interface BsPagination {
+    }
     interface BsPlaceholders {
+    }
+    interface BsPopovers {
+    }
+    interface BsScrollspy {
+    }
+    interface BsSpinners {
+    }
+    interface BsToasts {
+    }
+    interface BsTooltips {
     }
     interface MyComponent {
         /**
@@ -86,6 +110,18 @@ export interface BsAlertCustomEvent<T> extends CustomEvent<T> {
     target: HTMLBsAlertElement;
 }
 declare global {
+    interface HTMLBaNavbarElement extends Components.BaNavbar, HTMLStencilElement {
+    }
+    var HTMLBaNavbarElement: {
+        prototype: HTMLBaNavbarElement;
+        new (): HTMLBaNavbarElement;
+    };
+    interface HTMLBsAccordionElement extends Components.BsAccordion, HTMLStencilElement {
+    }
+    var HTMLBsAccordionElement: {
+        prototype: HTMLBsAccordionElement;
+        new (): HTMLBsAccordionElement;
+    };
     interface HTMLBsAlertElement extends Components.BsAlert, HTMLStencilElement {
     }
     var HTMLBsAlertElement: {
@@ -97,6 +133,12 @@ declare global {
     var HTMLBsBadgeElement: {
         prototype: HTMLBsBadgeElement;
         new (): HTMLBsBadgeElement;
+    };
+    interface HTMLBsBreadcrumbElement extends Components.BsBreadcrumb, HTMLStencilElement {
+    }
+    var HTMLBsBreadcrumbElement: {
+        prototype: HTMLBsBreadcrumbElement;
+        new (): HTMLBsBreadcrumbElement;
     };
     interface HTMLBsButtonElement extends Components.BsButton, HTMLStencilElement {
     }
@@ -110,11 +152,65 @@ declare global {
         prototype: HTMLBsCardsElement;
         new (): HTMLBsCardsElement;
     };
+    interface HTMLBsCarouselElement extends Components.BsCarousel, HTMLStencilElement {
+    }
+    var HTMLBsCarouselElement: {
+        prototype: HTMLBsCarouselElement;
+        new (): HTMLBsCarouselElement;
+    };
+    interface HTMLBsCollapseElement extends Components.BsCollapse, HTMLStencilElement {
+    }
+    var HTMLBsCollapseElement: {
+        prototype: HTMLBsCollapseElement;
+        new (): HTMLBsCollapseElement;
+    };
+    interface HTMLBsListGroupElement extends Components.BsListGroup, HTMLStencilElement {
+    }
+    var HTMLBsListGroupElement: {
+        prototype: HTMLBsListGroupElement;
+        new (): HTMLBsListGroupElement;
+    };
+    interface HTMLBsPaginationElement extends Components.BsPagination, HTMLStencilElement {
+    }
+    var HTMLBsPaginationElement: {
+        prototype: HTMLBsPaginationElement;
+        new (): HTMLBsPaginationElement;
+    };
     interface HTMLBsPlaceholdersElement extends Components.BsPlaceholders, HTMLStencilElement {
     }
     var HTMLBsPlaceholdersElement: {
         prototype: HTMLBsPlaceholdersElement;
         new (): HTMLBsPlaceholdersElement;
+    };
+    interface HTMLBsPopoversElement extends Components.BsPopovers, HTMLStencilElement {
+    }
+    var HTMLBsPopoversElement: {
+        prototype: HTMLBsPopoversElement;
+        new (): HTMLBsPopoversElement;
+    };
+    interface HTMLBsScrollspyElement extends Components.BsScrollspy, HTMLStencilElement {
+    }
+    var HTMLBsScrollspyElement: {
+        prototype: HTMLBsScrollspyElement;
+        new (): HTMLBsScrollspyElement;
+    };
+    interface HTMLBsSpinnersElement extends Components.BsSpinners, HTMLStencilElement {
+    }
+    var HTMLBsSpinnersElement: {
+        prototype: HTMLBsSpinnersElement;
+        new (): HTMLBsSpinnersElement;
+    };
+    interface HTMLBsToastsElement extends Components.BsToasts, HTMLStencilElement {
+    }
+    var HTMLBsToastsElement: {
+        prototype: HTMLBsToastsElement;
+        new (): HTMLBsToastsElement;
+    };
+    interface HTMLBsTooltipsElement extends Components.BsTooltips, HTMLStencilElement {
+    }
+    var HTMLBsTooltipsElement: {
+        prototype: HTMLBsTooltipsElement;
+        new (): HTMLBsTooltipsElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -123,15 +219,31 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "ba-navbar": HTMLBaNavbarElement;
+        "bs-accordion": HTMLBsAccordionElement;
         "bs-alert": HTMLBsAlertElement;
         "bs-badge": HTMLBsBadgeElement;
+        "bs-breadcrumb": HTMLBsBreadcrumbElement;
         "bs-button": HTMLBsButtonElement;
         "bs-cards": HTMLBsCardsElement;
+        "bs-carousel": HTMLBsCarouselElement;
+        "bs-collapse": HTMLBsCollapseElement;
+        "bs-list-group": HTMLBsListGroupElement;
+        "bs-pagination": HTMLBsPaginationElement;
         "bs-placeholders": HTMLBsPlaceholdersElement;
+        "bs-popovers": HTMLBsPopoversElement;
+        "bs-scrollspy": HTMLBsScrollspyElement;
+        "bs-spinners": HTMLBsSpinnersElement;
+        "bs-toasts": HTMLBsToastsElement;
+        "bs-tooltips": HTMLBsTooltipsElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface BaNavbar {
+    }
+    interface BsAccordion {
+    }
     interface BsAlert {
         /**
           * 样式文件
@@ -164,6 +276,8 @@ declare namespace LocalJSX {
          */
         "type"?: BSThemeType1;
     }
+    interface BsBreadcrumb {
+    }
     interface BsButton {
         /**
           * 组件 class 样式
@@ -188,7 +302,25 @@ declare namespace LocalJSX {
     }
     interface BsCards {
     }
+    interface BsCarousel {
+    }
+    interface BsCollapse {
+    }
+    interface BsListGroup {
+    }
+    interface BsPagination {
+    }
     interface BsPlaceholders {
+    }
+    interface BsPopovers {
+    }
+    interface BsScrollspy {
+    }
+    interface BsSpinners {
+    }
+    interface BsToasts {
+    }
+    interface BsTooltips {
     }
     interface MyComponent {
         /**
@@ -205,11 +337,23 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "ba-navbar": BaNavbar;
+        "bs-accordion": BsAccordion;
         "bs-alert": BsAlert;
         "bs-badge": BsBadge;
+        "bs-breadcrumb": BsBreadcrumb;
         "bs-button": BsButton;
         "bs-cards": BsCards;
+        "bs-carousel": BsCarousel;
+        "bs-collapse": BsCollapse;
+        "bs-list-group": BsListGroup;
+        "bs-pagination": BsPagination;
         "bs-placeholders": BsPlaceholders;
+        "bs-popovers": BsPopovers;
+        "bs-scrollspy": BsScrollspy;
+        "bs-spinners": BsSpinners;
+        "bs-toasts": BsToasts;
+        "bs-tooltips": BsTooltips;
         "my-component": MyComponent;
     }
 }
@@ -217,11 +361,23 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ba-navbar": LocalJSX.BaNavbar & JSXBase.HTMLAttributes<HTMLBaNavbarElement>;
+            "bs-accordion": LocalJSX.BsAccordion & JSXBase.HTMLAttributes<HTMLBsAccordionElement>;
             "bs-alert": LocalJSX.BsAlert & JSXBase.HTMLAttributes<HTMLBsAlertElement>;
             "bs-badge": LocalJSX.BsBadge & JSXBase.HTMLAttributes<HTMLBsBadgeElement>;
+            "bs-breadcrumb": LocalJSX.BsBreadcrumb & JSXBase.HTMLAttributes<HTMLBsBreadcrumbElement>;
             "bs-button": LocalJSX.BsButton & JSXBase.HTMLAttributes<HTMLBsButtonElement>;
             "bs-cards": LocalJSX.BsCards & JSXBase.HTMLAttributes<HTMLBsCardsElement>;
+            "bs-carousel": LocalJSX.BsCarousel & JSXBase.HTMLAttributes<HTMLBsCarouselElement>;
+            "bs-collapse": LocalJSX.BsCollapse & JSXBase.HTMLAttributes<HTMLBsCollapseElement>;
+            "bs-list-group": LocalJSX.BsListGroup & JSXBase.HTMLAttributes<HTMLBsListGroupElement>;
+            "bs-pagination": LocalJSX.BsPagination & JSXBase.HTMLAttributes<HTMLBsPaginationElement>;
             "bs-placeholders": LocalJSX.BsPlaceholders & JSXBase.HTMLAttributes<HTMLBsPlaceholdersElement>;
+            "bs-popovers": LocalJSX.BsPopovers & JSXBase.HTMLAttributes<HTMLBsPopoversElement>;
+            "bs-scrollspy": LocalJSX.BsScrollspy & JSXBase.HTMLAttributes<HTMLBsScrollspyElement>;
+            "bs-spinners": LocalJSX.BsSpinners & JSXBase.HTMLAttributes<HTMLBsSpinnersElement>;
+            "bs-toasts": LocalJSX.BsToasts & JSXBase.HTMLAttributes<HTMLBsToastsElement>;
+            "bs-tooltips": LocalJSX.BsTooltips & JSXBase.HTMLAttributes<HTMLBsTooltipsElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
