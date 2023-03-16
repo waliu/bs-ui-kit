@@ -74,6 +74,18 @@ export namespace Components {
     }
     interface BsCollapse {
     }
+    interface BsFormControls {
+    }
+    interface BsInput {
+        /**
+          * 输入前的提示内容
+         */
+        "placeholder": string;
+        /**
+          * 类型
+         */
+        "type": string;
+    }
     interface BsListGroup {
     }
     interface BsPagination {
@@ -164,6 +176,18 @@ declare global {
         prototype: HTMLBsCollapseElement;
         new (): HTMLBsCollapseElement;
     };
+    interface HTMLBsFormControlsElement extends Components.BsFormControls, HTMLStencilElement {
+    }
+    var HTMLBsFormControlsElement: {
+        prototype: HTMLBsFormControlsElement;
+        new (): HTMLBsFormControlsElement;
+    };
+    interface HTMLBsInputElement extends Components.BsInput, HTMLStencilElement {
+    }
+    var HTMLBsInputElement: {
+        prototype: HTMLBsInputElement;
+        new (): HTMLBsInputElement;
+    };
     interface HTMLBsListGroupElement extends Components.BsListGroup, HTMLStencilElement {
     }
     var HTMLBsListGroupElement: {
@@ -228,6 +252,8 @@ declare global {
         "bs-cards": HTMLBsCardsElement;
         "bs-carousel": HTMLBsCarouselElement;
         "bs-collapse": HTMLBsCollapseElement;
+        "bs-form-controls": HTMLBsFormControlsElement;
+        "bs-input": HTMLBsInputElement;
         "bs-list-group": HTMLBsListGroupElement;
         "bs-pagination": HTMLBsPaginationElement;
         "bs-placeholders": HTMLBsPlaceholdersElement;
@@ -306,6 +332,18 @@ declare namespace LocalJSX {
     }
     interface BsCollapse {
     }
+    interface BsFormControls {
+    }
+    interface BsInput {
+        /**
+          * 输入前的提示内容
+         */
+        "placeholder"?: string;
+        /**
+          * 类型
+         */
+        "type"?: string;
+    }
     interface BsListGroup {
     }
     interface BsPagination {
@@ -346,6 +384,8 @@ declare namespace LocalJSX {
         "bs-cards": BsCards;
         "bs-carousel": BsCarousel;
         "bs-collapse": BsCollapse;
+        "bs-form-controls": BsFormControls;
+        "bs-input": BsInput;
         "bs-list-group": BsListGroup;
         "bs-pagination": BsPagination;
         "bs-placeholders": BsPlaceholders;
@@ -370,6 +410,8 @@ declare module "@stencil/core" {
             "bs-cards": LocalJSX.BsCards & JSXBase.HTMLAttributes<HTMLBsCardsElement>;
             "bs-carousel": LocalJSX.BsCarousel & JSXBase.HTMLAttributes<HTMLBsCarouselElement>;
             "bs-collapse": LocalJSX.BsCollapse & JSXBase.HTMLAttributes<HTMLBsCollapseElement>;
+            "bs-form-controls": LocalJSX.BsFormControls & JSXBase.HTMLAttributes<HTMLBsFormControlsElement>;
+            "bs-input": LocalJSX.BsInput & JSXBase.HTMLAttributes<HTMLBsInputElement>;
             "bs-list-group": LocalJSX.BsListGroup & JSXBase.HTMLAttributes<HTMLBsListGroupElement>;
             "bs-pagination": LocalJSX.BsPagination & JSXBase.HTMLAttributes<HTMLBsPaginationElement>;
             "bs-placeholders": LocalJSX.BsPlaceholders & JSXBase.HTMLAttributes<HTMLBsPlaceholdersElement>;

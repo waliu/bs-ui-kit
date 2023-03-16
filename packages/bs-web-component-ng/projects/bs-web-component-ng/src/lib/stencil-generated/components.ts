@@ -208,6 +208,49 @@ export declare interface BsCollapse extends Components.BsCollapse {}
 @ProxyCmp({
 })
 @Component({
+  selector: 'bs-form-controls',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsFormControls {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsFormControls extends Components.BsFormControls {}
+
+
+@ProxyCmp({
+  inputs: ['placeholder', 'type']
+})
+@Component({
+  selector: 'bs-input',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['placeholder', 'type'],
+})
+export class BsInput {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsInput extends Components.BsInput {}
+
+
+@ProxyCmp({
+})
+@Component({
   selector: 'bs-list-group',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',

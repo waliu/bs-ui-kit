@@ -44,8 +44,12 @@ export class BsAlert {
   render() {
     return (
       <Host class={this.class}>
-        <div class={`alert${this.type ? " alert-" + this.type : ""}${this.dismissible ? " alert-dismissible" : ""}`}
-             role="alert">
+        <div
+          class={`alert
+            ${this.type ? " alert-" + this.type : ""}
+            ${this.dismissible ? " alert-dismissible" : ""}`
+          }
+          role="alert">
           {this.message}
           {this.dismissible ?
             <button
