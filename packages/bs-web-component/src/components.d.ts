@@ -35,6 +35,10 @@ export namespace Components {
         "type": BSThemeType;
     }
     interface BsBadge {
+        /**
+          * 主题色
+         */
+        "type": BSThemeType1;
     }
     interface BsButton {
         /**
@@ -57,6 +61,8 @@ export namespace Components {
           * 主题色
          */
         "type": BSThemeType1;
+    }
+    interface BsCards {
     }
     interface BsPlaceholders {
     }
@@ -98,6 +104,12 @@ declare global {
         prototype: HTMLBsButtonElement;
         new (): HTMLBsButtonElement;
     };
+    interface HTMLBsCardsElement extends Components.BsCards, HTMLStencilElement {
+    }
+    var HTMLBsCardsElement: {
+        prototype: HTMLBsCardsElement;
+        new (): HTMLBsCardsElement;
+    };
     interface HTMLBsPlaceholdersElement extends Components.BsPlaceholders, HTMLStencilElement {
     }
     var HTMLBsPlaceholdersElement: {
@@ -114,6 +126,7 @@ declare global {
         "bs-alert": HTMLBsAlertElement;
         "bs-badge": HTMLBsBadgeElement;
         "bs-button": HTMLBsButtonElement;
+        "bs-cards": HTMLBsCardsElement;
         "bs-placeholders": HTMLBsPlaceholdersElement;
         "my-component": HTMLMyComponentElement;
     }
@@ -146,6 +159,10 @@ declare namespace LocalJSX {
         "type"?: BSThemeType;
     }
     interface BsBadge {
+        /**
+          * 主题色
+         */
+        "type"?: BSThemeType1;
     }
     interface BsButton {
         /**
@@ -169,6 +186,8 @@ declare namespace LocalJSX {
          */
         "type"?: BSThemeType1;
     }
+    interface BsCards {
+    }
     interface BsPlaceholders {
     }
     interface MyComponent {
@@ -189,6 +208,7 @@ declare namespace LocalJSX {
         "bs-alert": BsAlert;
         "bs-badge": BsBadge;
         "bs-button": BsButton;
+        "bs-cards": BsCards;
         "bs-placeholders": BsPlaceholders;
         "my-component": MyComponent;
     }
@@ -200,6 +220,7 @@ declare module "@stencil/core" {
             "bs-alert": LocalJSX.BsAlert & JSXBase.HTMLAttributes<HTMLBsAlertElement>;
             "bs-badge": LocalJSX.BsBadge & JSXBase.HTMLAttributes<HTMLBsBadgeElement>;
             "bs-button": LocalJSX.BsButton & JSXBase.HTMLAttributes<HTMLBsButtonElement>;
+            "bs-cards": LocalJSX.BsCards & JSXBase.HTMLAttributes<HTMLBsCardsElement>;
             "bs-placeholders": LocalJSX.BsPlaceholders & JSXBase.HTMLAttributes<HTMLBsPlaceholdersElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }

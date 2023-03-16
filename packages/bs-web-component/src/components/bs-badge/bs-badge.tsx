@@ -1,4 +1,5 @@
-import { Component, Host, h } from '@stencil/core';
+import {Component, Host, h, Prop} from '@stencil/core';
+import {BSThemeType} from "../bs-alert/bs-alert";
 
 @Component({
   tag: 'bs-badge',
@@ -6,11 +7,18 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class BsBadge {
+  /**
+   * 主题色
+   */
+  @Prop() type: BSThemeType = null;
 
   render() {
     return (
       <Host>
-        <span class="badge text-bg-secondary">
+        <span class={`
+          badge
+          ${this.type ? " text-bg-" + this.type : ""}
+        `}>
            <slot></slot>
         </span>
       </Host>

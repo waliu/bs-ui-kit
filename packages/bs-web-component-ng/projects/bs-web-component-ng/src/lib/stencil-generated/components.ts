@@ -36,13 +36,14 @@ export declare interface BsAlert extends Components.BsAlert {
 
 
 @ProxyCmp({
+  inputs: ['type']
 })
 @Component({
   selector: 'bs-badge',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['type'],
 })
 export class BsBadge {
   protected el: HTMLElement;
@@ -76,6 +77,27 @@ export class BsButton {
 
 
 export declare interface BsButton extends Components.BsButton {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-cards',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsCards {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsCards extends Components.BsCards {}
 
 
 @ProxyCmp({
