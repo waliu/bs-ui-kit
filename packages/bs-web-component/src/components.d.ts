@@ -157,6 +157,18 @@ export namespace Components {
     }
     interface BsListGroupItem {
         /**
+          * 选中样式
+         */
+        "active": boolean;
+        /**
+          * 组件 class 样式
+         */
+        "class": string;
+        /**
+          * 禁止选中样式
+         */
+        "disabled": boolean;
+        /**
           * 主题色
          */
         "type": BSThemeType;
@@ -501,6 +513,18 @@ declare namespace LocalJSX {
         "type"?: BSThemeType;
     }
     interface BsListGroupItem {
+        /**
+          * 选中样式
+         */
+        "active"?: boolean;
+        /**
+          * 组件 class 样式
+         */
+        "class"?: string;
+        /**
+          * 禁止选中样式
+         */
+        "disabled"?: boolean;
         /**
           * 主题色
          */

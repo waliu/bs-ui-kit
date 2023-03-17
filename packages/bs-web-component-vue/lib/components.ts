@@ -87,7 +87,10 @@ export const BsListGroup = /*@__PURE__*/ defineContainer<JSX.BsListGroup>('bs-li
 
 
 export const BsListGroupItem = /*@__PURE__*/ defineContainer<JSX.BsListGroupItem>('bs-list-group-item', undefined, [
-  'type'
+  'type',
+  'active',
+  'disabled',
+  'class'
 ]);
 
 
