@@ -15,6 +15,7 @@ export const DIRECTIVES = [
   d.BsFormControls,
   d.BsInput,
   d.BsListGroup,
+  d.BsListGroupItem,
   d.BsPagination,
   d.BsPlaceholders,
   d.BsPopovers,

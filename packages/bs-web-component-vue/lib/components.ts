@@ -79,7 +79,16 @@ export const BsInput = /*@__PURE__*/ defineContainer<JSX.BsInput>('bs-input', un
 ]);
 
 
-export const BsListGroup = /*@__PURE__*/ defineContainer<JSX.BsListGroup>('bs-list-group', undefined);
+export const BsListGroup = /*@__PURE__*/ defineContainer<JSX.BsListGroup>('bs-list-group', undefined, [
+  'type',
+  'GroupType',
+  'class'
+]);
+
+
+export const BsListGroupItem = /*@__PURE__*/ defineContainer<JSX.BsListGroupItem>('bs-list-group-item', undefined, [
+  'type'
+]);
 
 
 export const BsPagination = /*@__PURE__*/ defineContainer<JSX.BsPagination>('bs-pagination', undefined);

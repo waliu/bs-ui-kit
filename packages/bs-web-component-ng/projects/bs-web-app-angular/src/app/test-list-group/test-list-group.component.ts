@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./test-list-group.component.scss']
 })
 export class TestListGroupComponent {
-
 }
