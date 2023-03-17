@@ -8,6 +8,7 @@ import {BsWebComponentNgModule} from "bs-web-component-ng";
 import {TestButtonModule} from "./test-button/test-button.module";
 import {TestBadgeModule} from "./test-badge/test-badge.module";
 import {TestCardsModule} from "./test-cards/test-cards.module";
+import {TestFormControlsModule} from "./test-form-controls/test-form-controls.module";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {TestCardsModule} from "./test-cards/test-cards.module";
     TestButtonModule,
     TestBadgeModule,
     TestCardsModule,
+    TestFormControlsModule,
     BsWebComponentNgModule
   ],
   providers: [],

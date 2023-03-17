@@ -12,6 +12,8 @@ export const DIRECTIVES = [
   d.BsCardsBody,
   d.BsCarousel,
   d.BsCollapse,
+  d.BsFormControls,
+  d.BsInput,
   d.BsListGroup,
   d.BsPagination,
   d.BsPlaceholders,

@@ -1,4 +1,5 @@
 import {Component, h, Event, EventEmitter, Host, Prop} from '@stencil/core';
+import {BSThemeType} from "../../global/type-script/bs-type";
 
 @Component({
   tag: 'bs-alert',
@@ -44,8 +45,12 @@ export class BsAlert {
   render() {
     return (
       <Host class={this.class}>
-        <div class={`alert${this.type ? " alert-" + this.type : ""}${this.dismissible ? " alert-dismissible" : ""}`}
-             role="alert">
+        <div
+          class={`alert
+            ${this.type ? " alert-" + this.type : ""}
+            ${this.dismissible ? " alert-dismissible" : ""}`
+          }
+          role="alert">
           {this.message}
           {this.dismissible ?
             <button
@@ -60,6 +65,4 @@ export class BsAlert {
     );
   }
 }
-
-export type BSThemeType = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
 

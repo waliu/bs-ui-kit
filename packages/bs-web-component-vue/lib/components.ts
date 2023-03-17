@@ -68,6 +68,17 @@ export const BsCarousel = /*@__PURE__*/ defineContainer<JSX.BsCarousel>('bs-caro
 export const BsCollapse = /*@__PURE__*/ defineContainer<JSX.BsCollapse>('bs-collapse', undefined);
 
 
+export const BsFormControls = /*@__PURE__*/ defineContainer<JSX.BsFormControls>('bs-form-controls', undefined, [
+  'label'
+]);
+
+
+export const BsInput = /*@__PURE__*/ defineContainer<JSX.BsInput>('bs-input', undefined, [
+  'type',
+  'placeholder'
+]);
+
+
 export const BsListGroup = /*@__PURE__*/ defineContainer<JSX.BsListGroup>('bs-list-group', undefined);
 
 

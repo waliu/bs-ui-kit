@@ -11,7 +11,7 @@ export class BsCardsBody {
   /**
    * 标题
    */
-  @Prop() title: string = null;
+  @Prop({attribute: 'title', reflect: true}) title: string = null;
   /**
    * 副标题
    */
