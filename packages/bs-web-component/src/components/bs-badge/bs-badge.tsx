@@ -1,5 +1,6 @@
 import {Component, Host, h, Prop} from '@stencil/core';
-import {BSThemeType} from "../bs-alert/bs-alert";
+import {BSThemeType} from "../../global/type-script/bs-type";
+
 
 @Component({
   tag: 'bs-badge',

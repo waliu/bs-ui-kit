@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import {Component, Host, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'bs-form-controls',
@@ -7,11 +7,12 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class BsFormControls {
 
+  @Prop() label: string = null;
   render() {
     return (
       <Host>
         <div class="mb-3">
-          <label class="form-label">Email address</label>
+          <label class="form-label">{this.label}</label>
           <slot></slot>
         </div>
       </Host>

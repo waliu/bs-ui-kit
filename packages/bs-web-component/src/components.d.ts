@@ -5,16 +5,12 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { BSThemeType } from "./components/bs-alert/bs-alert";
-import { BSThemeType as BSThemeType1 } from "./components/bs-alert/bs-alert";
-import { BSSizeType } from "./components/bs-button/bs-button";
-import { BSThemeType as BSThemeType2, Direction } from "./components/bs-cards/bs-cards";
-import { BSThemeType as BSThemeType3 } from "./components/bs-cards/bs-cards";
-export { BSThemeType } from "./components/bs-alert/bs-alert";
-export { BSThemeType as BSThemeType1 } from "./components/bs-alert/bs-alert";
-export { BSSizeType } from "./components/bs-button/bs-button";
-export { BSThemeType as BSThemeType2, Direction } from "./components/bs-cards/bs-cards";
-export { BSThemeType as BSThemeType3 } from "./components/bs-cards/bs-cards";
+import { BSSizeType, BSThemeType } from "./global/type-script/bs-type";
+import { BSThemeType as BSThemeType1, Direction } from "./components/bs-cards/bs-cards";
+import { BSThemeType as BSThemeType2 } from "./components/bs-cards/bs-cards";
+export { BSSizeType, BSThemeType } from "./global/type-script/bs-type";
+export { BSThemeType as BSThemeType1, Direction } from "./components/bs-cards/bs-cards";
+export { BSThemeType as BSThemeType2 } from "./components/bs-cards/bs-cards";
 export namespace Components {
     interface BaNavbar {
     }
@@ -46,7 +42,7 @@ export namespace Components {
         /**
           * 主题色
          */
-        "type": BSThemeType1;
+        "type": BSThemeType;
     }
     interface BsBreadcrumb {
     }
@@ -70,13 +66,13 @@ export namespace Components {
         /**
           * 主题色
          */
-        "type": BSThemeType1;
+        "type": BSThemeType;
     }
     interface BsCards {
         /**
           * 边框颜色
          */
-        "borderType": BSThemeType2;
+        "borderType": BSThemeType1;
         /**
           * 页脚
          */
@@ -96,7 +92,7 @@ export namespace Components {
         /**
           * 字体颜色
          */
-        "textType": BSThemeType2;
+        "textType": BSThemeType1;
         /**
           * 图片url
          */
@@ -104,7 +100,7 @@ export namespace Components {
         /**
           * 主题色
          */
-        "type": BSThemeType2;
+        "type": BSThemeType1;
     }
     interface BsCardsBody {
         /**
@@ -122,7 +118,7 @@ export namespace Components {
         /**
           * 字体颜色
          */
-        "textType": BSThemeType3;
+        "textType": BSThemeType2;
         /**
           * 标题
          */
@@ -133,6 +129,7 @@ export namespace Components {
     interface BsCollapse {
     }
     interface BsFormControls {
+        "label": string;
     }
     interface BsInput {
         /**
@@ -365,7 +362,7 @@ declare namespace LocalJSX {
         /**
           * 主题色
          */
-        "type"?: BSThemeType1;
+        "type"?: BSThemeType;
     }
     interface BsBreadcrumb {
     }
@@ -389,13 +386,13 @@ declare namespace LocalJSX {
         /**
           * 主题色
          */
-        "type"?: BSThemeType1;
+        "type"?: BSThemeType;
     }
     interface BsCards {
         /**
           * 边框颜色
          */
-        "borderType"?: BSThemeType2;
+        "borderType"?: BSThemeType1;
         /**
           * 页脚
          */
@@ -415,7 +412,7 @@ declare namespace LocalJSX {
         /**
           * 字体颜色
          */
-        "textType"?: BSThemeType2;
+        "textType"?: BSThemeType1;
         /**
           * 图片url
          */
@@ -423,7 +420,7 @@ declare namespace LocalJSX {
         /**
           * 主题色
          */
-        "type"?: BSThemeType2;
+        "type"?: BSThemeType1;
     }
     interface BsCardsBody {
         /**
@@ -441,7 +438,7 @@ declare namespace LocalJSX {
         /**
           * 字体颜色
          */
-        "textType"?: BSThemeType3;
+        "textType"?: BSThemeType2;
         /**
           * 标题
          */
@@ -452,6 +449,7 @@ declare namespace LocalJSX {
     interface BsCollapse {
     }
     interface BsFormControls {
+        "label"?: string;
     }
     interface BsInput {
         /**

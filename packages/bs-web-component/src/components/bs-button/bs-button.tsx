@@ -1,5 +1,6 @@
 import {Component, Host, h, Prop} from '@stencil/core';
-import {BSThemeType} from "../bs-alert/bs-alert";
+import {BSSizeType, BSThemeType} from '../../global/type-script/bs-type';
+
 
 @Component({
   tag: 'bs-button',
@@ -50,4 +51,4 @@ export class BsButton {
 
 }
 
-export type BSSizeType = "lg" | "sm";
+

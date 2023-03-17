@@ -229,13 +229,14 @@ export declare interface BsCollapse extends Components.BsCollapse {}
 
 
 @ProxyCmp({
+  inputs: ['label']
 })
 @Component({
   selector: 'bs-form-controls',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['label'],
 })
 export class BsFormControls {
   protected el: HTMLElement;
