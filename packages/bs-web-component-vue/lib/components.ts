@@ -54,7 +54,7 @@ export const BsCards = /*@__PURE__*/ defineContainer<JSX.BsCards>('bs-cards', un
 
 
 export const BsCardsBody = /*@__PURE__*/ defineContainer<JSX.BsCardsBody>('bs-cards-body', undefined, [
-  'title',
+  'bodyTitle',
   'subtitles',
   'desc',
   'textType',
@@ -81,7 +81,16 @@ export const BsInput = /*@__PURE__*/ defineContainer<JSX.BsInput>('bs-input', un
 ]);
 
 
-export const BsListGroup = /*@__PURE__*/ defineContainer<JSX.BsListGroup>('bs-list-group', undefined);
+export const BsListGroup = /*@__PURE__*/ defineContainer<JSX.BsListGroup>('bs-list-group', undefined, [
+  'type',
+  'GroupType',
+  'class'
+]);
+
+
+export const BsListGroupItem = /*@__PURE__*/ defineContainer<JSX.BsListGroupItem>('bs-list-group-item', undefined, [
+  'type'
+]);
 
 
 export const BsPagination = /*@__PURE__*/ defineContainer<JSX.BsPagination>('bs-pagination', undefined);

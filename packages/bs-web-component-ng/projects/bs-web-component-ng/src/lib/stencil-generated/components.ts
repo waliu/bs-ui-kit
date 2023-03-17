@@ -165,14 +165,14 @@ export declare interface BsCards extends Components.BsCards {}
 
 
 @ProxyCmp({
-  inputs: ['class', 'desc', 'subtitles', 'textType', 'title']
+  inputs: ['bodyTitle', 'class', 'desc', 'subtitles', 'textType']
 })
 @Component({
   selector: 'bs-cards-body',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['class', 'desc', 'subtitles', 'textType', 'title'],
+  inputs: ['bodyTitle', 'class', 'desc', 'subtitles', 'textType'],
 })
 export class BsCardsBody {
   protected el: HTMLElement;
@@ -273,13 +273,14 @@ export declare interface BsInput extends Components.BsInput {}
 
 
 @ProxyCmp({
+  inputs: ['GroupType', 'class', 'type']
 })
 @Component({
   selector: 'bs-list-group',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['GroupType', 'class', 'type'],
 })
 export class BsListGroup {
   protected el: HTMLElement;
@@ -291,6 +292,28 @@ export class BsListGroup {
 
 
 export declare interface BsListGroup extends Components.BsListGroup {}
+
+
+@ProxyCmp({
+  inputs: ['type']
+})
+@Component({
+  selector: 'bs-list-group-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['type'],
+})
+export class BsListGroupItem {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsListGroupItem extends Components.BsListGroupItem {}
 
 
 @ProxyCmp({

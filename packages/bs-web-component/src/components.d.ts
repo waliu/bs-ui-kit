@@ -5,10 +5,10 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { BSSizeType, BSThemeType } from "./global/type-script/bs-type";
+import { BSGroupType, BSSizeType, BSThemeType } from "./global/type-script/bs-type";
 import { BSThemeType as BSThemeType1, Direction } from "./components/bs-cards/bs-cards";
 import { BSThemeType as BSThemeType2 } from "./components/bs-cards/bs-cards";
-export { BSSizeType, BSThemeType } from "./global/type-script/bs-type";
+export { BSGroupType, BSSizeType, BSThemeType } from "./global/type-script/bs-type";
 export { BSThemeType as BSThemeType1, Direction } from "./components/bs-cards/bs-cards";
 export { BSThemeType as BSThemeType2 } from "./components/bs-cards/bs-cards";
 export namespace Components {
@@ -104,6 +104,10 @@ export namespace Components {
     }
     interface BsCardsBody {
         /**
+          * 标题
+         */
+        "bodyTitle": string;
+        /**
           * 组件 class 样式
          */
         "class": string;
@@ -119,10 +123,6 @@ export namespace Components {
           * 字体颜色
          */
         "textType": BSThemeType2;
-        /**
-          * 标题
-         */
-        "title": string;
     }
     interface BsCarousel {
     }
@@ -150,6 +150,24 @@ export namespace Components {
         "type": string;
     }
     interface BsListGroup {
+        /**
+          * 不同展示形态：flush去除除底边外边框；Numbered显示编号；horizontal：横向排序；
+         */
+        "GroupType": BSGroupType;
+        /**
+          * 组件 class 样式
+         */
+        "class": string;
+        /**
+          * 主题色
+         */
+        "type": BSThemeType;
+    }
+    interface BsListGroupItem {
+        /**
+          * 主题色
+         */
+        "type": BSThemeType;
     }
     interface BsPagination {
     }
@@ -265,6 +283,12 @@ declare global {
         prototype: HTMLBsListGroupElement;
         new (): HTMLBsListGroupElement;
     };
+    interface HTMLBsListGroupItemElement extends Components.BsListGroupItem, HTMLStencilElement {
+    }
+    var HTMLBsListGroupItemElement: {
+        prototype: HTMLBsListGroupItemElement;
+        new (): HTMLBsListGroupItemElement;
+    };
     interface HTMLBsPaginationElement extends Components.BsPagination, HTMLStencilElement {
     }
     var HTMLBsPaginationElement: {
@@ -333,6 +357,7 @@ declare global {
         "bs-form-controls": HTMLBsFormControlsElement;
         "bs-input": HTMLBsInputElement;
         "bs-list-group": HTMLBsListGroupElement;
+        "bs-list-group-item": HTMLBsListGroupItemElement;
         "bs-pagination": HTMLBsPaginationElement;
         "bs-placeholders": HTMLBsPlaceholdersElement;
         "bs-popovers": HTMLBsPopoversElement;
@@ -441,6 +466,10 @@ declare namespace LocalJSX {
     }
     interface BsCardsBody {
         /**
+          * 标题
+         */
+        "bodyTitle"?: string;
+        /**
           * 组件 class 样式
          */
         "class"?: string;
@@ -456,10 +485,6 @@ declare namespace LocalJSX {
           * 字体颜色
          */
         "textType"?: BSThemeType2;
-        /**
-          * 标题
-         */
-        "title"?: string;
     }
     interface BsCarousel {
     }
@@ -487,6 +512,24 @@ declare namespace LocalJSX {
         "type"?: string;
     }
     interface BsListGroup {
+        /**
+          * 不同展示形态：flush去除除底边外边框；Numbered显示编号；horizontal：横向排序；
+         */
+        "GroupType"?: BSGroupType;
+        /**
+          * 组件 class 样式
+         */
+        "class"?: string;
+        /**
+          * 主题色
+         */
+        "type"?: BSThemeType;
+    }
+    interface BsListGroupItem {
+        /**
+          * 主题色
+         */
+        "type"?: BSThemeType;
     }
     interface BsPagination {
     }
@@ -532,6 +575,7 @@ declare namespace LocalJSX {
         "bs-form-controls": BsFormControls;
         "bs-input": BsInput;
         "bs-list-group": BsListGroup;
+        "bs-list-group-item": BsListGroupItem;
         "bs-pagination": BsPagination;
         "bs-placeholders": BsPlaceholders;
         "bs-popovers": BsPopovers;
@@ -560,6 +604,7 @@ declare module "@stencil/core" {
             "bs-form-controls": LocalJSX.BsFormControls & JSXBase.HTMLAttributes<HTMLBsFormControlsElement>;
             "bs-input": LocalJSX.BsInput & JSXBase.HTMLAttributes<HTMLBsInputElement>;
             "bs-list-group": LocalJSX.BsListGroup & JSXBase.HTMLAttributes<HTMLBsListGroupElement>;
+            "bs-list-group-item": LocalJSX.BsListGroupItem & JSXBase.HTMLAttributes<HTMLBsListGroupItemElement>;
             "bs-pagination": LocalJSX.BsPagination & JSXBase.HTMLAttributes<HTMLBsPaginationElement>;
             "bs-placeholders": LocalJSX.BsPlaceholders & JSXBase.HTMLAttributes<HTMLBsPlaceholdersElement>;
             "bs-popovers": LocalJSX.BsPopovers & JSXBase.HTMLAttributes<HTMLBsPopoversElement>;
