@@ -16,10 +16,12 @@ export class BsListGroupItem {
   render() {
     return (
       <Host>
-        <li class={
+        <li
+          class={
           `list-group-item
            ${this.type && this.type.length > 0 ? 'list-group-item' + this.type : ''}`
-        }>
+          }
+        >
           <slot></slot>
         </li>
       </Host>

@@ -20,6 +20,7 @@ export const DIRECTIVES = [
   d.BsPlaceholders,
   d.BsPopovers,
   d.BsScrollspy,
+  d.BsSelect,
   d.BsSpinners,
   d.BsTextarea,
   d.BsToasts,

@@ -130,6 +130,7 @@ export namespace Components {
     }
     interface BsFormControls {
         "label": string;
+        "row": string;
     }
     interface BsInput {
         /**
@@ -137,9 +138,17 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * 文件上传多选，只有当 type等于file时生效
+         */
+        "multiple": boolean;
+        /**
           * 输入前的提示内容
          */
         "placeholder": string;
+        /**
+          * 是否为已读
+         */
+        "readonly": boolean;
         /**
           * 输入框的大小
          */
@@ -148,6 +157,10 @@ export namespace Components {
           * 类型
          */
         "type": string;
+        /**
+          * 输入值
+         */
+        "value": string;
     }
     interface BsListGroup {
         /**
@@ -177,9 +190,23 @@ export namespace Components {
     }
     interface BsScrollspy {
     }
+    interface BsSelect {
+    }
     interface BsSpinners {
     }
     interface BsTextarea {
+        /**
+          * 设置是否禁止
+         */
+        "disabled": boolean;
+        /**
+          * 提示文字
+         */
+        "placeholder": string;
+        /**
+          * 提示文字
+         */
+        "rows": number;
     }
     interface BsToasts {
     }
@@ -313,6 +340,12 @@ declare global {
         prototype: HTMLBsScrollspyElement;
         new (): HTMLBsScrollspyElement;
     };
+    interface HTMLBsSelectElement extends Components.BsSelect, HTMLStencilElement {
+    }
+    var HTMLBsSelectElement: {
+        prototype: HTMLBsSelectElement;
+        new (): HTMLBsSelectElement;
+    };
     interface HTMLBsSpinnersElement extends Components.BsSpinners, HTMLStencilElement {
     }
     var HTMLBsSpinnersElement: {
@@ -362,6 +395,7 @@ declare global {
         "bs-placeholders": HTMLBsPlaceholdersElement;
         "bs-popovers": HTMLBsPopoversElement;
         "bs-scrollspy": HTMLBsScrollspyElement;
+        "bs-select": HTMLBsSelectElement;
         "bs-spinners": HTMLBsSpinnersElement;
         "bs-textarea": HTMLBsTextareaElement;
         "bs-toasts": HTMLBsToastsElement;
@@ -492,6 +526,7 @@ declare namespace LocalJSX {
     }
     interface BsFormControls {
         "label"?: string;
+        "row"?: string;
     }
     interface BsInput {
         /**
@@ -499,9 +534,17 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * 文件上传多选，只有当 type等于file时生效
+         */
+        "multiple"?: boolean;
+        /**
           * 输入前的提示内容
          */
         "placeholder"?: string;
+        /**
+          * 是否为已读
+         */
+        "readonly"?: boolean;
         /**
           * 输入框的大小
          */
@@ -510,6 +553,10 @@ declare namespace LocalJSX {
           * 类型
          */
         "type"?: string;
+        /**
+          * 输入值
+         */
+        "value"?: string;
     }
     interface BsListGroup {
         /**
@@ -539,9 +586,23 @@ declare namespace LocalJSX {
     }
     interface BsScrollspy {
     }
+    interface BsSelect {
+    }
     interface BsSpinners {
     }
     interface BsTextarea {
+        /**
+          * 设置是否禁止
+         */
+        "disabled"?: boolean;
+        /**
+          * 提示文字
+         */
+        "placeholder"?: string;
+        /**
+          * 提示文字
+         */
+        "rows"?: number;
     }
     interface BsToasts {
     }
@@ -580,6 +641,7 @@ declare namespace LocalJSX {
         "bs-placeholders": BsPlaceholders;
         "bs-popovers": BsPopovers;
         "bs-scrollspy": BsScrollspy;
+        "bs-select": BsSelect;
         "bs-spinners": BsSpinners;
         "bs-textarea": BsTextarea;
         "bs-toasts": BsToasts;
@@ -609,6 +671,7 @@ declare module "@stencil/core" {
             "bs-placeholders": LocalJSX.BsPlaceholders & JSXBase.HTMLAttributes<HTMLBsPlaceholdersElement>;
             "bs-popovers": LocalJSX.BsPopovers & JSXBase.HTMLAttributes<HTMLBsPopoversElement>;
             "bs-scrollspy": LocalJSX.BsScrollspy & JSXBase.HTMLAttributes<HTMLBsScrollspyElement>;
+            "bs-select": LocalJSX.BsSelect & JSXBase.HTMLAttributes<HTMLBsSelectElement>;
             "bs-spinners": LocalJSX.BsSpinners & JSXBase.HTMLAttributes<HTMLBsSpinnersElement>;
             "bs-textarea": LocalJSX.BsTextarea & JSXBase.HTMLAttributes<HTMLBsTextareaElement>;
             "bs-toasts": LocalJSX.BsToasts & JSXBase.HTMLAttributes<HTMLBsToastsElement>;

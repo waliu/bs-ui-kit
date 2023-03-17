@@ -10,6 +10,7 @@
 | Property | Attribute | Description | Type     | Default |
 | -------- | --------- | ----------- | -------- | ------- |
 | `label`  | `label`   |             | `string` | `null`  |
+| `row`    | `row`     |             | `string` | `null`  |
 
 
 ----------------------------------------------

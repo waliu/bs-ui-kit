@@ -22,6 +22,18 @@ export class BsInput {
    * 是否警用
    */
   @Prop() disabled: boolean = false;
+  /**
+   * 是否为已读
+   */
+  @Prop() readonly: boolean = false;
+  /**
+   * 输入值
+   */
+  @Prop() value: string = null;
+  /**
+   * 文件上传多选，只有当 type等于file时生效
+   */
+  @Prop() multiple: boolean = false;
 
   render() {
     return (
@@ -32,8 +44,11 @@ export class BsInput {
           form-control
           ${this.size ? " form-control-" + this.size : ""}
           `}
+          readonly={this.readonly}
           disabled={this.disabled}
           placeholder={this.placeholder}
+          value={this.value}
+          multiple={this.multiple}
         />
       </Host>
     );
