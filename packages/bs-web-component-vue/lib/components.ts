@@ -54,7 +54,7 @@ export const BsCards = /*@__PURE__*/ defineContainer<JSX.BsCards>('bs-cards', un
 
 
 export const BsCardsBody = /*@__PURE__*/ defineContainer<JSX.BsCardsBody>('bs-cards-body', undefined, [
-  'title',
+  'bodyTitle',
   'subtitles',
   'desc',
   'textType',

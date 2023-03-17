@@ -11,7 +11,7 @@ export class BsCardsBody {
   /**
    * 标题
    */
-  @Prop() title: string = null;
+  @Prop() bodyTitle: string = null;
   /**
    * 副标题
    */
@@ -37,7 +37,7 @@ export class BsCardsBody {
           ${this.textType && this.textType.length > 0 ? " text-" + this.textType : ''}
           `
         }>
-          {this.title && this.title.length > 0 ? <h5 class="card-title">{this.title}</h5> : ''}
+          {this.bodyTitle && this.bodyTitle.length > 0 ? <h5 class="card-title">{this.bodyTitle}</h5> : ''}
           {this.subtitles && this.subtitles.length > 0 ?
             <h6 class="card-subtitle mb-2 text-muted">{this.subtitles}</h6> : ''}
           {this.desc && this.desc.length > 0 ? <p class="card-text">{this.desc}</p> : ''}

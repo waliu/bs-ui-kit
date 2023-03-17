@@ -108,6 +108,10 @@ export namespace Components {
     }
     interface BsCardsBody {
         /**
+          * 标题
+         */
+        "bodyTitle": string;
+        /**
           * 组件 class 样式
          */
         "class": string;
@@ -123,10 +127,6 @@ export namespace Components {
           * 字体颜色
          */
         "textType": BSThemeType3;
-        /**
-          * 标题
-         */
-        "title": string;
     }
     interface BsCarousel {
     }
@@ -401,6 +401,10 @@ declare namespace LocalJSX {
     }
     interface BsCardsBody {
         /**
+          * 标题
+         */
+        "bodyTitle"?: string;
+        /**
           * 组件 class 样式
          */
         "class"?: string;
@@ -416,10 +420,6 @@ declare namespace LocalJSX {
           * 字体颜色
          */
         "textType"?: BSThemeType3;
-        /**
-          * 标题
-         */
-        "title"?: string;
     }
     interface BsCarousel {
     }
