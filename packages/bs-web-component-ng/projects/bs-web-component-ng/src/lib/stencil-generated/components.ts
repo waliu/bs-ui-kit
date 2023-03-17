@@ -165,14 +165,14 @@ export declare interface BsCards extends Components.BsCards {}
 
 
 @ProxyCmp({
-  inputs: ['class', 'desc', 'subtitles', 'textType', 'title']
+  inputs: ['bodyTitle', 'class', 'desc', 'subtitles', 'textType']
 })
 @Component({
   selector: 'bs-cards-body',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['class', 'desc', 'subtitles', 'textType', 'title'],
+  inputs: ['bodyTitle', 'class', 'desc', 'subtitles', 'textType'],
 })
 export class BsCardsBody {
   protected el: HTMLElement;
