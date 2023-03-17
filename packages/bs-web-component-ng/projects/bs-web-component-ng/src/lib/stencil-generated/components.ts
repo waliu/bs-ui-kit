@@ -251,14 +251,14 @@ export declare interface BsFormControls extends Components.BsFormControls {}
 
 
 @ProxyCmp({
-  inputs: ['placeholder', 'type']
+  inputs: ['disabled', 'placeholder', 'size', 'type']
 })
 @Component({
   selector: 'bs-input',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['placeholder', 'type'],
+  inputs: ['disabled', 'placeholder', 'size', 'type'],
 })
 export class BsInput {
   protected el: HTMLElement;
@@ -396,6 +396,27 @@ export class BsSpinners {
 
 
 export declare interface BsSpinners extends Components.BsSpinners {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'bs-textarea',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsTextarea {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsTextarea extends Components.BsTextarea {}
 
 
 @ProxyCmp({

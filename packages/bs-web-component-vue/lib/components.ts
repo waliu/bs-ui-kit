@@ -75,7 +75,9 @@ export const BsFormControls = /*@__PURE__*/ defineContainer<JSX.BsFormControls>(
 
 export const BsInput = /*@__PURE__*/ defineContainer<JSX.BsInput>('bs-input', undefined, [
   'type',
-  'placeholder'
+  'placeholder',
+  'size',
+  'disabled'
 ]);
 
 
@@ -95,6 +97,9 @@ export const BsScrollspy = /*@__PURE__*/ defineContainer<JSX.BsScrollspy>('bs-sc
 
 
 export const BsSpinners = /*@__PURE__*/ defineContainer<JSX.BsSpinners>('bs-spinners', undefined);
+
+
+export const BsTextarea = /*@__PURE__*/ defineContainer<JSX.BsTextarea>('bs-textarea', undefined);
 
 
 export const BsToasts = /*@__PURE__*/ defineContainer<JSX.BsToasts>('bs-toasts', undefined);

@@ -133,9 +133,17 @@ export namespace Components {
     }
     interface BsInput {
         /**
+          * 是否警用
+         */
+        "disabled": boolean;
+        /**
           * 输入前的提示内容
          */
         "placeholder": string;
+        /**
+          * 输入框的大小
+         */
+        "size": string;
         /**
           * 类型
          */
@@ -152,6 +160,8 @@ export namespace Components {
     interface BsScrollspy {
     }
     interface BsSpinners {
+    }
+    interface BsTextarea {
     }
     interface BsToasts {
     }
@@ -285,6 +295,12 @@ declare global {
         prototype: HTMLBsSpinnersElement;
         new (): HTMLBsSpinnersElement;
     };
+    interface HTMLBsTextareaElement extends Components.BsTextarea, HTMLStencilElement {
+    }
+    var HTMLBsTextareaElement: {
+        prototype: HTMLBsTextareaElement;
+        new (): HTMLBsTextareaElement;
+    };
     interface HTMLBsToastsElement extends Components.BsToasts, HTMLStencilElement {
     }
     var HTMLBsToastsElement: {
@@ -322,6 +338,7 @@ declare global {
         "bs-popovers": HTMLBsPopoversElement;
         "bs-scrollspy": HTMLBsScrollspyElement;
         "bs-spinners": HTMLBsSpinnersElement;
+        "bs-textarea": HTMLBsTextareaElement;
         "bs-toasts": HTMLBsToastsElement;
         "bs-tooltips": HTMLBsTooltipsElement;
         "my-component": HTMLMyComponentElement;
@@ -453,9 +470,17 @@ declare namespace LocalJSX {
     }
     interface BsInput {
         /**
+          * 是否警用
+         */
+        "disabled"?: boolean;
+        /**
           * 输入前的提示内容
          */
         "placeholder"?: string;
+        /**
+          * 输入框的大小
+         */
+        "size"?: string;
         /**
           * 类型
          */
@@ -472,6 +497,8 @@ declare namespace LocalJSX {
     interface BsScrollspy {
     }
     interface BsSpinners {
+    }
+    interface BsTextarea {
     }
     interface BsToasts {
     }
@@ -510,6 +537,7 @@ declare namespace LocalJSX {
         "bs-popovers": BsPopovers;
         "bs-scrollspy": BsScrollspy;
         "bs-spinners": BsSpinners;
+        "bs-textarea": BsTextarea;
         "bs-toasts": BsToasts;
         "bs-tooltips": BsTooltips;
         "my-component": MyComponent;
@@ -537,6 +565,7 @@ declare module "@stencil/core" {
             "bs-popovers": LocalJSX.BsPopovers & JSXBase.HTMLAttributes<HTMLBsPopoversElement>;
             "bs-scrollspy": LocalJSX.BsScrollspy & JSXBase.HTMLAttributes<HTMLBsScrollspyElement>;
             "bs-spinners": LocalJSX.BsSpinners & JSXBase.HTMLAttributes<HTMLBsSpinnersElement>;
+            "bs-textarea": LocalJSX.BsTextarea & JSXBase.HTMLAttributes<HTMLBsTextareaElement>;
             "bs-toasts": LocalJSX.BsToasts & JSXBase.HTMLAttributes<HTMLBsToastsElement>;
             "bs-tooltips": LocalJSX.BsTooltips & JSXBase.HTMLAttributes<HTMLBsTooltipsElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
