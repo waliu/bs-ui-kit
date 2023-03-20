@@ -10,6 +10,9 @@ import {TestBadgeModule} from "./test-badge/test-badge.module";
 import {TestCardsModule} from "./test-cards/test-cards.module";
 import {TestFormControlsModule} from "./test-form-controls/test-form-controls.module";
 import {TestListGroupModule} from "./test-list-group/test-list-group.module";
+import {TestCollapseModule} from "./test-collapse/test-collapse.module";
+import {TestCarouselModule} from "./test-carousel/test-carousel.module";
+import {TestPaginationModule} from "./test-pagination/test-pagination.module";
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import {TestListGroupModule} from "./test-list-group/test-list-group.module";
     TestCardsModule,
     TestFormControlsModule,
     TestListGroupModule,
+    TestCollapseModule,
+    TestCarouselModule,
+    TestPaginationModule,
     BsWebComponentNgModule
   ],
   providers: [],

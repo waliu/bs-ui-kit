@@ -94,7 +94,13 @@ export const BsListGroupItem = /*@__PURE__*/ defineContainer<JSX.BsListGroupItem
 ]);
 
 
-export const BsPagination = /*@__PURE__*/ defineContainer<JSX.BsPagination>('bs-pagination', undefined);
+export const BsPagination = /*@__PURE__*/ defineContainer<JSX.BsPagination>('bs-pagination', undefined, [
+  'type',
+  'outline',
+  'size',
+  'disabled',
+  'class'
+]);
 
 
 export const BsPlaceholders = /*@__PURE__*/ defineContainer<JSX.BsPlaceholders>('bs-placeholders', undefined);
