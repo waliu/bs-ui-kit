@@ -295,14 +295,14 @@ export declare interface BsListGroup extends Components.BsListGroup {}
 
 
 @ProxyCmp({
-  inputs: ['type']
+  inputs: ['active', 'class', 'disabled', 'type']
 })
 @Component({
   selector: 'bs-list-group-item',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['type'],
+  inputs: ['active', 'class', 'disabled', 'type'],
 })
 export class BsListGroupItem {
   protected el: HTMLElement;
@@ -317,13 +317,14 @@ export declare interface BsListGroupItem extends Components.BsListGroupItem {}
 
 
 @ProxyCmp({
+  inputs: ['class', 'disabled', 'outline', 'size', 'type']
 })
 @Component({
   selector: 'bs-pagination',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['class', 'disabled', 'outline', 'size', 'type'],
 })
 export class BsPagination {
   protected el: HTMLElement;

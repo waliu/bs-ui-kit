@@ -178,11 +178,43 @@ export namespace Components {
     }
     interface BsListGroupItem {
         /**
+          * 选中样式
+         */
+        "active": boolean;
+        /**
+          * 组件 class 样式
+         */
+        "class": string;
+        /**
+          * 禁止选中样式
+         */
+        "disabled": boolean;
+        /**
           * 主题色
          */
         "type": BSThemeType;
     }
     interface BsPagination {
+        /**
+          * 组件 class 样式
+         */
+        "class": string;
+        /**
+          * 是否为禁用状态
+         */
+        "disabled": boolean;
+        /**
+          * 样式
+         */
+        "outline": boolean;
+        /**
+          * 大小
+         */
+        "size": BSSizeType;
+        /**
+          * 主题色
+         */
+        "type": BSThemeType;
     }
     interface BsPlaceholders {
     }
@@ -574,11 +606,43 @@ declare namespace LocalJSX {
     }
     interface BsListGroupItem {
         /**
+          * 选中样式
+         */
+        "active"?: boolean;
+        /**
+          * 组件 class 样式
+         */
+        "class"?: string;
+        /**
+          * 禁止选中样式
+         */
+        "disabled"?: boolean;
+        /**
           * 主题色
          */
         "type"?: BSThemeType;
     }
     interface BsPagination {
+        /**
+          * 组件 class 样式
+         */
+        "class"?: string;
+        /**
+          * 是否为禁用状态
+         */
+        "disabled"?: boolean;
+        /**
+          * 样式
+         */
+        "outline"?: boolean;
+        /**
+          * 大小
+         */
+        "size"?: BSSizeType;
+        /**
+          * 主题色
+         */
+        "type"?: BSThemeType;
     }
     interface BsPlaceholders {
     }

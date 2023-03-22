@@ -93,11 +93,20 @@ export const BsListGroup = /*@__PURE__*/ defineContainer<JSX.BsListGroup>('bs-li
 
 
 export const BsListGroupItem = /*@__PURE__*/ defineContainer<JSX.BsListGroupItem>('bs-list-group-item', undefined, [
-  'type'
+  'type',
+  'active',
+  'disabled',
+  'class'
 ]);
 
 
-export const BsPagination = /*@__PURE__*/ defineContainer<JSX.BsPagination>('bs-pagination', undefined);
+export const BsPagination = /*@__PURE__*/ defineContainer<JSX.BsPagination>('bs-pagination', undefined, [
+  'type',
+  'outline',
+  'size',
+  'disabled',
+  'class'
+]);
 
 
 export const BsPlaceholders = /*@__PURE__*/ defineContainer<JSX.BsPlaceholders>('bs-placeholders', undefined);
