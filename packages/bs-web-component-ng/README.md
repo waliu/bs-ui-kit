@@ -1,27 +1,37 @@
-# BsWebComponentNg
+### 安装组件
+```bash
+//依赖组件项目
+npm install bs-web-component
+//依赖angular组件适配器
+npm install bs-web-component-ng
+```
+### 导入组件
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+````ts
+// 在 module 中倒入组件
+import {NgModule} from '@angular/core';
 
-## Development server
+import {BsWebComponentNgModule} from "bs-web-component-ng";
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BsWebComponentNgModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+````
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 消费组件
+``````html
+<bs-alert
+        type="secondary"
+        [dismissible]="false"
+        message="A simple primary alert—check it out!"
+></bs-alert>
+``````
