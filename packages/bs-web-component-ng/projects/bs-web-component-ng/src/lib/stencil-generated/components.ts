@@ -229,14 +229,14 @@ export declare interface BsCollapse extends Components.BsCollapse {}
 
 
 @ProxyCmp({
-  inputs: ['label']
+  inputs: ['label', 'row']
 })
 @Component({
   selector: 'bs-form-controls',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['label'],
+  inputs: ['label', 'row'],
 })
 export class BsFormControls {
   protected el: HTMLElement;
@@ -251,14 +251,14 @@ export declare interface BsFormControls extends Components.BsFormControls {}
 
 
 @ProxyCmp({
-  inputs: ['placeholder', 'type']
+  inputs: ['disabled', 'multiple', 'placeholder', 'readonly', 'size', 'type', 'value']
 })
 @Component({
   selector: 'bs-input',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['placeholder', 'type'],
+  inputs: ['disabled', 'multiple', 'placeholder', 'readonly', 'size', 'type', 'value'],
 })
 export class BsInput {
   protected el: HTMLElement;
@@ -404,6 +404,27 @@ export declare interface BsScrollspy extends Components.BsScrollspy {}
 @ProxyCmp({
 })
 @Component({
+  selector: 'bs-select',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class BsSelect {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsSelect extends Components.BsSelect {}
+
+
+@ProxyCmp({
+})
+@Component({
   selector: 'bs-spinners',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
@@ -420,6 +441,28 @@ export class BsSpinners {
 
 
 export declare interface BsSpinners extends Components.BsSpinners {}
+
+
+@ProxyCmp({
+  inputs: ['disabled', 'placeholder', 'rows']
+})
+@Component({
+  selector: 'bs-textarea',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['disabled', 'placeholder', 'rows'],
+})
+export class BsTextarea {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsTextarea extends Components.BsTextarea {}
 
 
 @ProxyCmp({

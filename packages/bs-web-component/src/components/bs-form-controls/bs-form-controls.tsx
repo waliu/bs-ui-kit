@@ -8,10 +8,17 @@ import {Component, Host, h, Prop} from '@stencil/core';
 export class BsFormControls {
 
   @Prop() label: string = null;
+
+  @Prop() row: string = null;
+
   render() {
     return (
       <Host>
-        <div class="mb-3">
+        <div class={
+          `mb-3
+          ${this.row ? this.row : ""}
+          `
+        }>
           <label class="form-label">{this.label}</label>
           <slot></slot>
         </div>

@@ -1,3 +1,41 @@
-<bs-form-controls>
-  <bs-input placeholder="name@example.com"></bs-input>
+
+<div>带form-controls的输入框</div>
+<br>
+<bs-form-controls label="Email address">
+  <bs-input type="text" placeholder="name@example.com"></bs-input>
 </bs-form-controls>
+<br>
+<div>只读输入框</div>
+<bs-form-controls label="Email address">
+  <bs-input placeholder="name@example.com" value="123" readonly="true"></bs-input>
+</bs-form-controls>
+<br>
+<div>禁用输入框</div>
+<bs-form-controls>
+  <bs-input placeholder="name@example.com" disabled="true"></bs-input>
+</bs-form-controls>
+<br>
+<div>加大号输入框</div>
+<bs-form-controls>
+  <bs-input placeholder="name@example.com" disabled="true" size="lg"></bs-input>
+</bs-form-controls>
+<br>
+<div>多行输入框</div>
+<bs-form-controls>
+  <bs-textarea placeholder="name@example.com" rows="2" disabled="true" size="lg"></bs-textarea>
+</bs-form-controls>
+
+<br>
+<div>这是上传组件</div>
+<br>
+<div>默认组件</div>
+<bs-input type="file"></bs-input>
+<br>
+<div>多文件上传</div>
+<bs-input type="file" multiple="true"></bs-input>
+<br>
+<div>禁用上传</div>
+<bs-input type="file" multiple="true" disabled="true"></bs-input>
+<br>
+<div>加大号上传</div>
+<bs-input type="file" multiple="true" disabled="true" size="lg"></bs-input>
