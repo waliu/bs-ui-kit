@@ -8,6 +8,11 @@
     "watch-libs": "ng build bs-web-component-ng --watch --configuration development",
     "test": "ng test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waliu/bs-ui-kit.git"
+  },
+  "description": "angular Component",
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.0",
