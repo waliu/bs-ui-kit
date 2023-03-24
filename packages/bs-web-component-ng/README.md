@@ -18,6 +18,7 @@ import {BsWebComponentNgModule} from "bs-web-component-ng";
     AppComponent,
   ],
   imports: [
+    //导入组件模块
     BsWebComponentNgModule
   ],
   providers: [],

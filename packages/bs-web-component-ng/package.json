@@ -1,6 +1,7 @@
 {
   "name": "bs-web-component-ng",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "description": "angular Component",
   "scripts": {
     "ng": "ng",
     "start-app": "ng serve bs-web-app-angular",
@@ -12,7 +13,6 @@
     "type": "git",
     "url": "https://github.com/waliu/bs-ui-kit.git"
   },
-  "description": "angular Component",
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.0",
