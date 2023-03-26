@@ -13,6 +13,9 @@ import {TestListGroupModule} from "./test-list-group/test-list-group.module";
 import {TestCollapseModule} from "./test-collapse/test-collapse.module";
 import {TestCarouselModule} from "./test-carousel/test-carousel.module";
 import {TestPaginationModule} from "./test-pagination/test-pagination.module";
+import {TestNavbarModule} from "./test-navbar/test-navbar.module";
+import {TestAccordionModule} from "./test-accordion/test-accordion.module";
+import {TestBreadcrumbModule} from "./test-breadcrumb/test-breadcrumb.module";
 
 @NgModule({
   declarations: [
@@ -21,9 +24,12 @@ import {TestPaginationModule} from "./test-pagination/test-pagination.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TestNavbarModule,
+    TestAccordionModule,
     TestAlertModule,
     TestButtonModule,
     TestBadgeModule,
+    TestBreadcrumbModule,
     TestCardsModule,
     TestFormControlsModule,
     TestListGroupModule,
