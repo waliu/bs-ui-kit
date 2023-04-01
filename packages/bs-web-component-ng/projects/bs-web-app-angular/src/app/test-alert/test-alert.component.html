@@ -1,49 +1,52 @@
-<bs-alert
-  type="primary"
-  [dismissible]="true"
-  (bsOnClose)="bsOnClose($event)"
->
-  <div>A simple primary alert—check it out!</div>
-</bs-alert>
-<bs-alert
-  type="secondary"
-  [dismissible]="false"
-  message="A simple primary alert—check it out!"
-  (bsOnClose)="bsOnClose($event)"
-></bs-alert>
-<bs-alert
-  type="success"
-  [dismissible]="true"
-  message="A simple primary alert—check it out!"
-  (bsOnClose)="bsOnClose($event)"
-></bs-alert>
-<bs-alert
-  type="danger"
-  [dismissible]="true"
-  message="A simple primary alert—check it out!"
-  (bsOnClose)="bsOnClose($event)"
-></bs-alert>
-<bs-alert
-  type="warning"
-  [dismissible]="true"
-  message="A simple primary alert—check it out!"
-  (bsOnClose)="bsOnClose($event)"
-></bs-alert>
-<bs-alert
-  type="info"
-  [dismissible]="true"
-  message="A simple primary alert—check it out!"
-  (bsOnClose)="bsOnClose($event)"
-></bs-alert>
-<bs-alert
-  type="light"
-  [dismissible]="true"
-  message="A simple primary alert—check it out!"
-  (bsOnClose)="bsOnClose($event)"
-></bs-alert>
-<bs-alert
-  type="dark"
-  [dismissible]="true"
-  message="A simple primary alert—check it out!"
-  (bsOnClose)="bsOnClose($event)"
-></bs-alert>
+<!--<bs-alert-->
+<!--  type="primary"-->
+<!--  [dismissible]="true"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;-->
+<!--  <div>A simple primary alert—check it out!</div>-->
+<!--</bs-alert>-->
+<!--<bs-alert-->
+<!--  type="secondary"-->
+<!--  [dismissible]="false"-->
+<!--  message="A simple primary alert—check it out!"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;</bs-alert>-->
+<!--<bs-alert-->
+<!--  type="success"-->
+<!--  [dismissible]="true"-->
+<!--  message="A simple primary alert—check it out!"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;</bs-alert>-->
+<!--<bs-alert-->
+<!--  type="danger"-->
+<!--  [dismissible]="true"-->
+<!--  message="A simple primary alert—check it out!"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;</bs-alert>-->
+<!--<bs-alert-->
+<!--  type="warning"-->
+<!--  [dismissible]="true"-->
+<!--  message="A simple primary alert—check it out!"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;</bs-alert>-->
+<!--<bs-alert-->
+<!--  type="info"-->
+<!--  [dismissible]="true"-->
+<!--  message="A simple primary alert—check it out!"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;</bs-alert>-->
+<!--<bs-alert-->
+<!--  type="light"-->
+<!--  [dismissible]="true"-->
+<!--  message="A simple primary alert—check it out!"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;</bs-alert>-->
+<!--<bs-alert-->
+<!--  type="dark"-->
+<!--  [dismissible]="true"-->
+<!--  message="A simple primary alert—check it out!"-->
+<!--  (bsOnClose)="bsOnClose($event)"-->
+<!--&gt;</bs-alert>-->
+<!--{{content}}-->
+<div [innerHTML]="content"></div>
+
