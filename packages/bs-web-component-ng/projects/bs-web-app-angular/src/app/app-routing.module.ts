@@ -8,18 +8,22 @@ import {TestListGroupComponent} from "./test-list-group/test-list-group.componen
 import {TestCollapseComponent} from "./test-collapse/test-collapse.component";
 import {TestCarouselComponent} from "./test-carousel/test-carousel.component";
 import {TestPaginationComponent} from "./test-pagination/test-pagination.component";
-import {TestFormControlsComponent} from "./test-form-controls/test-form-controls.component";
+import {TestNavbarComponent} from "./test-navbar/test-navbar.component";
+import {TestAccordionComponent} from "./test-accordion/test-accordion.component";
+import {TestBreadcrumbComponent} from "./test-breadcrumb/test-breadcrumb.component";
 
 const routes: Routes = [
+  {path: 'test-navbar', component: TestNavbarComponent},
+  {path: 'test-accordion', component: TestAccordionComponent},
   {path: 'test-alert', component: TestAlertComponent},
   {path: 'test-button', component: TestButtonComponent},
   {path: 'test-badge', component: TestBadgeComponent},
+  {path: 'test-breadcrumb', component: TestBreadcrumbComponent},
   {path: 'test-cards', component: TestCardsComponent},
   {path: 'test-list-group', component: TestListGroupComponent},
   {path: 'test-collpse', component: TestCollapseComponent},
   {path: 'test-carousel', component: TestCarouselComponent},
   {path: 'test-pagination', component: TestPaginationComponent},
-  {path: 'test-form-controls', component: TestFormControlsComponent},
 ];
 
 @NgModule({
