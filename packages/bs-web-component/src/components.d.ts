@@ -132,10 +132,6 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * id
-         */
-        "id": string;
-        /**
           * 文本内容
          */
         "label": string;
@@ -600,10 +596,6 @@ declare namespace LocalJSX {
           * 是否警用
          */
         "disabled"?: boolean;
-        /**
-          * id
-         */
-        "id"?: string;
         /**
           * 文本内容
          */

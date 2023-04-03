@@ -72,8 +72,7 @@ export const BsCheckbox = /*@__PURE__*/ defineContainer<JSX.BsCheckbox>('bs-chec
   'disabled',
   'readonly',
   'value',
-  'label',
-  'id'
+  'label'
 ]);
 
 

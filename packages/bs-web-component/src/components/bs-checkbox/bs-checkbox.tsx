@@ -34,11 +34,7 @@ export class BsCheckbox {
    * 文本内容
    */
   @Prop() label: string = null;
-  /**
-   * id.
-   *
-   */
-  @Prop() id: string = null;
+
 
   render() {
     return (
@@ -47,7 +43,6 @@ export class BsCheckbox {
           class="form-check-input"
           type="checkbox"
           value={this.value}
-          id={this.id}
           disabled={this.disabled}
         />
         <label class="form-check-label">
