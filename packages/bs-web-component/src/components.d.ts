@@ -126,6 +126,36 @@ export namespace Components {
     }
     interface BsCarousel {
     }
+    interface BsCheckbox {
+        /**
+          * 是否警用
+         */
+        "disabled": boolean;
+        /**
+          * 文本内容
+         */
+        "label": string;
+        /**
+          * 输入前的提示内容
+         */
+        "placeholder": string;
+        /**
+          * 是否为已读
+         */
+        "readonly": boolean;
+        /**
+          * 输入框的大小
+         */
+        "size": string;
+        /**
+          * 类型
+         */
+        "type": string;
+        /**
+          * 输入值
+         */
+        "value": string;
+    }
     interface BsCollapse {
     }
     interface BsFormControls {
@@ -318,6 +348,12 @@ declare global {
         prototype: HTMLBsCarouselElement;
         new (): HTMLBsCarouselElement;
     };
+    interface HTMLBsCheckboxElement extends Components.BsCheckbox, HTMLStencilElement {
+    }
+    var HTMLBsCheckboxElement: {
+        prototype: HTMLBsCheckboxElement;
+        new (): HTMLBsCheckboxElement;
+    };
     interface HTMLBsCollapseElement extends Components.BsCollapse, HTMLStencilElement {
     }
     var HTMLBsCollapseElement: {
@@ -418,6 +454,7 @@ declare global {
         "bs-cards": HTMLBsCardsElement;
         "bs-cards-body": HTMLBsCardsBodyElement;
         "bs-carousel": HTMLBsCarouselElement;
+        "bs-checkbox": HTMLBsCheckboxElement;
         "bs-collapse": HTMLBsCollapseElement;
         "bs-form-controls": HTMLBsFormControlsElement;
         "bs-input": HTMLBsInputElement;
@@ -553,6 +590,36 @@ declare namespace LocalJSX {
         "textType"?: BSThemeType2;
     }
     interface BsCarousel {
+    }
+    interface BsCheckbox {
+        /**
+          * 是否警用
+         */
+        "disabled"?: boolean;
+        /**
+          * 文本内容
+         */
+        "label"?: string;
+        /**
+          * 输入前的提示内容
+         */
+        "placeholder"?: string;
+        /**
+          * 是否为已读
+         */
+        "readonly"?: boolean;
+        /**
+          * 输入框的大小
+         */
+        "size"?: string;
+        /**
+          * 类型
+         */
+        "type"?: string;
+        /**
+          * 输入值
+         */
+        "value"?: string;
     }
     interface BsCollapse {
     }
@@ -696,6 +763,7 @@ declare namespace LocalJSX {
         "bs-cards": BsCards;
         "bs-cards-body": BsCardsBody;
         "bs-carousel": BsCarousel;
+        "bs-checkbox": BsCheckbox;
         "bs-collapse": BsCollapse;
         "bs-form-controls": BsFormControls;
         "bs-input": BsInput;
@@ -726,6 +794,7 @@ declare module "@stencil/core" {
             "bs-cards": LocalJSX.BsCards & JSXBase.HTMLAttributes<HTMLBsCardsElement>;
             "bs-cards-body": LocalJSX.BsCardsBody & JSXBase.HTMLAttributes<HTMLBsCardsBodyElement>;
             "bs-carousel": LocalJSX.BsCarousel & JSXBase.HTMLAttributes<HTMLBsCarouselElement>;
+            "bs-checkbox": LocalJSX.BsCheckbox & JSXBase.HTMLAttributes<HTMLBsCheckboxElement>;
             "bs-collapse": LocalJSX.BsCollapse & JSXBase.HTMLAttributes<HTMLBsCollapseElement>;
             "bs-form-controls": LocalJSX.BsFormControls & JSXBase.HTMLAttributes<HTMLBsFormControlsElement>;
             "bs-input": LocalJSX.BsInput & JSXBase.HTMLAttributes<HTMLBsInputElement>;

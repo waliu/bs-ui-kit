@@ -11,6 +11,7 @@ export const DIRECTIVES = [
   d.BsCards,
   d.BsCardsBody,
   d.BsCarousel,
+  d.BsCheckbox,
   d.BsCollapse,
   d.BsFormControls,
   d.BsInput,
