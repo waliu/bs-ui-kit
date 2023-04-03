@@ -208,6 +208,28 @@ export declare interface BsCarousel extends Components.BsCarousel {}
 
 
 @ProxyCmp({
+  inputs: ['disabled', 'id', 'label', 'placeholder', 'readonly', 'size', 'type', 'value']
+})
+@Component({
+  selector: 'bs-checkbox',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['disabled', 'id', 'label', 'placeholder', 'readonly', 'size', 'type', 'value'],
+})
+export class BsCheckbox {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface BsCheckbox extends Components.BsCheckbox {}
+
+
+@ProxyCmp({
 })
 @Component({
   selector: 'bs-collapse',

@@ -65,6 +65,18 @@ export const BsCardsBody = /*@__PURE__*/ defineContainer<JSX.BsCardsBody>('bs-ca
 export const BsCarousel = /*@__PURE__*/ defineContainer<JSX.BsCarousel>('bs-carousel', undefined);
 
 
+export const BsCheckbox = /*@__PURE__*/ defineContainer<JSX.BsCheckbox>('bs-checkbox', undefined, [
+  'type',
+  'placeholder',
+  'size',
+  'disabled',
+  'readonly',
+  'value',
+  'label',
+  'id'
+]);
+
+
 export const BsCollapse = /*@__PURE__*/ defineContainer<JSX.BsCollapse>('bs-collapse', undefined);
 
 

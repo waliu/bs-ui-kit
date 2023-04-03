@@ -8,6 +8,7 @@ import {TestListGroupComponent} from "./test-list-group/test-list-group.componen
 import {TestCollapseComponent} from "./test-collapse/test-collapse.component";
 import {TestCarouselComponent} from "./test-carousel/test-carousel.component";
 import {TestPaginationComponent} from "./test-pagination/test-pagination.component";
+import {TestFormControlsComponent} from "./test-form-controls/test-form-controls.component";
 
 const routes: Routes = [
   {path: 'test-alert', component: TestAlertComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'test-collpse', component: TestCollapseComponent},
   {path: 'test-carousel', component: TestCarouselComponent},
   {path: 'test-pagination', component: TestPaginationComponent},
+  {path: 'test-form-controls', component: TestFormControlsComponent},
 ];
 
 @NgModule({
